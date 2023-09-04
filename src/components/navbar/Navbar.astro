@@ -1,4 +1,9 @@
 ---
+interface Props {
+    title?: string[]
+    clase?: string
+    link?: string[]
+}
 
 
 const { title, clase, link } = Astro.props
@@ -11,7 +16,7 @@ console.log(clase)
     {
         title.map((item, index) => {
             return (
-                <div key={index}>
+                <div key={index.toString()}>
                     <a class='lunes' href={link[index]}>{item}</a>
                 </div>
                 )
@@ -39,10 +44,11 @@ console.log(clase)
 
     a:hover {
         text-decoration: underline;
-        text-decoration-thickness: 2px;
+        /* text-decoration-thickness: 2px; */
         text-underline-offset: 8px;
         text-decoration-color: #b39800;
     }
+
 
 </style>
 
