@@ -1,0 +1,48 @@
+---
+
+
+const { title, clase, link } = Astro.props
+console.log(title)
+console.log(clase)
+
+---
+
+<div class=`${clase} flex gap-8`>
+    {
+        title.map((item, index) => {
+            return (
+                <div key={index}>
+                    <a class='lunes' href={link[index]}>{item}</a>
+                </div>
+                )
+        })
+    }
+</div>
+
+
+
+<style>
+
+    .en-linea{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .en-columnas{
+        display: flex;
+        flex-direction: column;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+        text-decoration-thickness: 2px;
+        text-underline-offset: 8px;
+        text-decoration-color: #b39800;
+    }
+
+</style>
+

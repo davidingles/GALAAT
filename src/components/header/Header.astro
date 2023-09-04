@@ -1,0 +1,26 @@
+---
+import Navbar from '../navbar/Navbar.astro'
+import SliderToggleTheme from '../botones-sliders/SliderToggleTheme.astro'
+
+const nav = ['Acerca de nosotros', 'Contacto', 'Catálogo']
+const link = ['/acerca', '/contacto', '/catalogo']
+const clase = 'en-linea'
+---
+
+
+<div class="flex">
+    <div class="w-48 h-48 border-8 flex justify-center items-center">
+        <div class="p-4"><img src="/svg/logo-aux-torres-01.svg" alt=""></div>
+    </div>
+
+    <nav class="flex flex-row flex-grow items-center border-red-400 border-8 justify-center">
+        <div class="flex flex-grow h-full border-blue-400 border-4 justify-center items-center">
+            <Navbar title={nav} clase={clase} link={link} />
+        </div>
+        <div class="relative flex justify-center h-full border-8 w-48">
+            <div class="absolute top-4 right-4 z-20">
+                <SliderToggleTheme />
+            </div>
+        </div>
+    </nav>
+</div>
