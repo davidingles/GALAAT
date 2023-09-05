@@ -3,6 +3,7 @@ import Header from '../components/header/Header.astro'
 import Layout from '../layouts/Layout.astro'
 import Footer from '../components/footer/Footer.astro'
 import BtnAdelante from '../components/botones-sliders/BtnAdelante.astro';
+import BtnVolver from '../components/botones-sliders/BtnVolver.astro';
 
 const title = 'Auxiliar Manipuladora del Cartón'
 
@@ -14,7 +15,7 @@ const title = 'Auxiliar Manipuladora del Cartón'
 <Layout title={title}>
 
 	<div class="flex flex-col h-max-screen w-max-screen">
-		<div>
+		<div id="header">
 			<Header />
 		</div>
 <!-- //BODY =================================================================================================		 -->
@@ -48,13 +49,18 @@ const title = 'Auxiliar Manipuladora del Cartón'
 						<img
 							id="img-nave"
 							class="w-full h-full object-cover"
-							src="/img/nave.jpg" alt="foto de la nave de Auxiliar Manipuladora del Cartón">
+							src="/img/nave.jpg" alt="foto de la nave de Auxiliar Manipuladora del Cartón"
+						>
 
-							<div id="ventana" class="absolute z-20 top-20 left-20 w-1/3 bg-white p-8 rounded-lg opacity-0">
-								<p class="martes text-black">
-									Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor praesentium aut, laudantium nostrum incidunt natus amet, libero facilis voluptatem, doloremque ea dolorum consequatur quidem quibusdam veritatis facere magni perspiciatis vero.
-								</p>
-							</div>
+						<div id="ventana" class="absolute z-10 top-10 h-[200px] left-20 w-1/3 bg-white p-8 rounded-lg opacity-0 shadow-2xl cursor-pointer hover:shadow-none overflow-y-hidden">
+							<p class="martes text-black">
+								Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor praesentium aut, laudantium nostrum incidunt natus amet, libero facilis voluptatem, doloremque ea dolorum consequatur quidem quibusdam veritatis facere magni perspiciatis vero.
+							</p>
+						</div>
+						<div class="absolute top-10 right-4 z-20 -rotate-90 scroll-smooth">
+							<BtnVolver />
+						</div>
+
 					</div>
 				</div>
 		</main>
@@ -165,6 +171,8 @@ const title = 'Auxiliar Manipuladora del Cartón'
 	const nave = document.querySelector("#nave") as HTMLElement
 	const ventana = document.querySelector("#ventana") as HTMLElement
 	const imagen = document.querySelector("#img-nave") as HTMLElement
+
+	
   
 	const observerOptions = {
 	  root: null,
@@ -180,6 +188,8 @@ const title = 'Auxiliar Manipuladora del Cartón'
 		  ventana.classList.add('ventana')
 		}else{
 			nave.style.opacity = '1'
+			ventana.classList.remove('ventana')
+			imagen.classList.remove('img-nave')
 		}
 	  })
 	}, observerOptions)
