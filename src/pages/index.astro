@@ -5,6 +5,7 @@ import Footer from '../components/footer/Footer.astro'
 import BtnAdelante from '../components/botones-sliders/BtnAdelante.astro';
 import BtnVolver from '../components/botones-sliders/BtnVolver.astro';
 import TarjetasMario from '../components/cards/TarjetasMario.astro';
+import Camion from '../components/Camion.astro';
 
 const title = 'Auxiliar Manipuladora del Cartón'
 
@@ -73,13 +74,36 @@ const title = 'Auxiliar Manipuladora del Cartón'
 								<TarjetasMario telefono="657 842 909" jefes="diseño" />
 								<TarjetasMario telefono="686 944 933" jefes="ventas" />
 								<TarjetasMario telefono="686 944 932" jefes="administracion" />
-								<a id="scroll-to-camion" href="#camion-section">
+								<a id="scroll-to-camion" href="#camion">
 									<TarjetasMario telefono="657 803 024" jefes="logistica" />
 								</a>
 							</div>
 						</main>
 				
 					</div>
+					<div class="absolute top-10 right-4 z-20 -rotate-90 scroll-smooth">
+						<BtnVolver />
+					</div>
+				</div>
+
+				<!-- // SECCION CAMION ==================================================== -->
+				<div id="camion" class="border-violet-400 border-4 relative">
+					<section
+					class='h-screen w-screen relative overflow-hidden flex flex-col items-center'
+				>
+					<video
+							id="miVideo"
+							class='h-full brightness-50'
+							muted
+							autoplay
+							loop
+							src='/videos/camion.mp4'
+						></video>
+				</section>
+				
+					<p class="absolute z-20 top-20 left-20 w-1/3 h-[200px]">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus fuga corrupti facilis saepe perspiciatis voluptate adipisci, tenetur recusandae deleniti dolores architecto officiis eligendi quam? Adipisci cupiditate illum iste vel quas!
+					</p>
 					<div class="absolute top-10 right-4 z-20 -rotate-90 scroll-smooth">
 						<BtnVolver />
 					</div>
