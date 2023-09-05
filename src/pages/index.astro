@@ -13,35 +13,55 @@ const title = 'Auxiliar Manipuladora del Cartón'
 
 <Layout title={title}>
 
-	<div>
-		<Header />
-	</div>
-
-	<div class="max-w-screen h-screen border-red-400 border-8 flex justify-center py-8">
-		<div  class="logo-grande w-2/3">
-
-			<div class="mb-[4rem] border-green-400 border-4 p-12">
-				<img class="w-54 h-54" src="/svg/logo-aux.svg" alt="">
-			</div>
-
-
-			<div>
-				<p class="logo">
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias dignissimos illo nam rerum itaque assumenda! Optio, corporis amet, ut facere molestiae necessitatibus error aliquam dolore earum provident non id quos?
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit labore et porro assumenda at, aliquid ipsam maxime aspernatur eum voluptatum odio ea necessitatibus dolore adipisci, mollitia reiciendis recusandae, voluptate a.
-				</p>
-				<div class="mt-4">
-					<a href="/catalogo">
-						<BtnAdelante />
-					</a>
-				</div>
-			</div>
+	<div class="flex flex-col h-max-screen w-max-screen">
+		<div>
+			<Header />
 		</div>
-	</div>
+<!-- //BODY =================================================================================================		 -->
+		<main class="flex flex-col border-red-900 border-8">
+			<!-- // SECCION 1 LOGO Y TEXTO ==================================================== -->
+				<div class="border-red-400 border-8 flex justify-center py-8">
+					<div  class="logo-grande w-2/3">
+		
+						<div class="mb-[4rem] border-green-400 border-4 p-12">
+							<img class="w-54 h-54" src="/svg/logo-aux.svg" alt="">
+						</div>
+		
+		
+						<div>
+							<p class="logo">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias dignissimos illo nam rerum itaque assumenda! Optio, corporis amet, ut facere molestiae necessitatibus error aliquam dolore earum provident non id quos?
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit labore et porro assumenda at, aliquid ipsam maxime aspernatur eum voluptatum odio ea necessitatibus dolore adipisci, mollitia reiciendis recusandae, voluptate a.
+							</p>
+							<div class="mt-4 mb-60">
+								<a href="/catalogo">
+									<BtnAdelante />
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+		
+			<!-- // SECCION 2 IMAGEN Y TEXTO ==================================================== -->
+				<div id="nave" class="border-green-400 border-4">
+					<div class="transition-opacity duration-300 relative">
+						<img
+							id="img-nave"
+							class="w-full h-full object-cover"
+							src="/img/nave.jpg" alt="foto de la nave de Auxiliar Manipuladora del Cartón">
 
+							<div id="ventana" class="absolute z-20 top-20 left-20 w-1/3 bg-white p-8 rounded-lg opacity-0">
+								<p class="martes text-black">
+									Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor praesentium aut, laudantium nostrum incidunt natus amet, libero facilis voluptatem, doloremque ea dolorum consequatur quidem quibusdam veritatis facere magni perspiciatis vero.
+								</p>
+							</div>
+					</div>
+				</div>
+		</main>
 
-	<div class="border-8 flex justify-center items-center h-[22rem] bg-[#202020] text-[#f2f2f2]">
-		<Footer />
+		<div class="border-8 flex justify-center items-center h-[22rem] bg-[#202020] text-[#f2f2f2]">
+			<Footer />
+		</div>
 	</div>
 
 </Layout>
@@ -103,4 +123,67 @@ const title = 'Auxiliar Manipuladora del Cartón'
 
 </style>
 
+<style>
+	.ventana{
+		transition: all 1s ease-in-out;
+		animation-name: aparecer;
+		animation-delay: 2s;
+		animation-duration: 1s;
+		animation-fill-mode: both;
+	}
+	@keyframes aparecer {
+		from {
+			opacity: 0;
+		}
+		to {
+			opacity: 1;
+		}
+	}
 
+	.img-nave{
+		transition: all 1s ease-in-out;
+		animation-name: brightness;
+		animation-delay: 1s;
+		animation-duration: 1s;
+		animation-fill-mode: both;
+	}
+	@keyframes brightness {
+		from {
+			filter: brightness(1);
+		}
+		to {
+			filter: brightness(.5);
+		}
+		
+	}
+	
+		
+	
+</style>
+
+<script>
+	const nave = document.querySelector("#nave") as HTMLElement
+	const ventana = document.querySelector("#ventana") as HTMLElement
+	const imagen = document.querySelector("#img-nave") as HTMLElement
+  
+	const observerOptions = {
+	  root: null,
+	  rootMargin: "100px", // en cuanto se vea el elemento
+	  threshold: 0.9, // porcentaje de visibilidad
+	}
+  
+	const observer = new IntersectionObserver((entries) => {
+	  entries.forEach((entry) => {
+		const { isIntersecting } = entry
+		if (isIntersecting) {
+			imagen.classList.add('img-nave')
+		  ventana.classList.add('ventana')
+		}else{
+			nave.style.opacity = '1'
+		}
+	  })
+	}, observerOptions)
+  
+	observer.observe(nave)
+  </script>
+  

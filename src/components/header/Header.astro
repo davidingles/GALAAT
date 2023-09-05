@@ -3,7 +3,7 @@ import Navbar from './Navbar.astro'
 import SliderToggleTheme from '../botones-sliders/SliderToggleTheme.astro'
 
 const nav = ['Acerca de nosotros', 'Contacto', 'Catálogo']
-const link = ['/acerca', '/contacto', '/catalogo']
+const link = ['/#nave', '/contacto', '/catalogo']
 const clase = 'en-linea'
 ---
 
@@ -21,8 +21,9 @@ const clase = 'en-linea'
                 <Navbar title={nav} clase={clase} link={link} />
             </div>
         </div>
+
         <div class="relative flex justify-center h-full border-8 w-48">
-            <div class="absolute top-4 right-4 z-20">
+            <div class="absolute top-2 right-4 z-20">
                 <SliderToggleTheme />
             </div>
         </div>

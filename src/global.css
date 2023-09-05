@@ -125,4 +125,25 @@ body {
 	-webkit-font-smoothing: antialiased;
 	/* opcional */
 	-moz-osx-font-smoothing: grayscale;
+
+
+}
+.dil-barra-desplazamiento{
+
+/* Estilos de la barra de desplazamiento */
+scrollbar-width: thin; /* Ancho de la barra de desplazamiento */
+scrollbar-color: #a92020 #0feb03; /* Color de la barra y el fondo de la barra */
+}
+
+/* Estilos para la barra de desplazamiento */
+.dil-barra-desplazamiento::-webkit-scrollbar {
+width: 8px; /* Ancho de la barra de desplazamiento */
+}
+
+.dil-barra-desplazamiento::-webkit-scrollbar-thumb {
+background-color: var(--auxiliar1); /* Color de la barra de desplazamiento */
+}
+
+.dil-barra-desplazamiento::-webkit-scrollbar-track {
+background-color: #d12323;
 }
