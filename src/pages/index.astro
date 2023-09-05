@@ -12,17 +12,24 @@ const title = 'Auxiliar Manipuladora del Cartón'
 
 <Layout title={title}>
 
-	<Header />
+	<div>
+		<Header />
+	</div>
 
 	<div class="max-w-screen h-screen border-red-400 border-8 flex justify-center py-8">
 		<div  class="logo-grande w-2/3">
-			<div class="mb-[4rem]">
+
+			<div class="mb-[4rem] border-green-400 border-4 p-12">
 				<img class="w-54 h-54" src="/svg/logo-aux.svg" alt="">
 			</div>
-			<p class="parrafo">
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias dignissimos illo nam rerum itaque assumenda! Optio, corporis amet, ut facere molestiae necessitatibus error aliquam dolore earum provident non id quos?
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit labore et porro assumenda at, aliquid ipsam maxime aspernatur eum voluptatum odio ea necessitatibus dolore adipisci, mollitia reiciendis recusandae, voluptate a.
-			</p>
+
+
+			<div>
+				<p class="logo">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias dignissimos illo nam rerum itaque assumenda! Optio, corporis amet, ut facere molestiae necessitatibus error aliquam dolore earum provident non id quos?
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit labore et porro assumenda at, aliquid ipsam maxime aspernatur eum voluptatum odio ea necessitatibus dolore adipisci, mollitia reiciendis recusandae, voluptate a.
+				</p>
+			</div>
 		</div>
 	</div>
 
@@ -44,6 +51,7 @@ const title = 'Auxiliar Manipuladora del Cartón'
 		animation-name: fadeDown;
 		animation-duration: 1s;
 		animation-fill-mode: both;
+		animation-delay: 1s;
 	}
 
 	
