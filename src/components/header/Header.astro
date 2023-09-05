@@ -1,5 +1,5 @@
 ---
-import Navbar from '../navbar/Navbar.astro'
+import Navbar from './Navbar.astro'
 import SliderToggleTheme from '../botones-sliders/SliderToggleTheme.astro'
 
 const nav = ['Acerca de nosotros', 'Contacto', 'Catálogo']
@@ -9,8 +9,10 @@ const clase = 'en-linea'
 
 
 <div class="flex">
-    <div class="relative fadeInLeft w-32 h-32 border-8 flex justify-center items-center">
-        <div class="absolute top-0 left-0 p-4"><img src="/svg/logo-aux-torres-01.svg" alt=""></div>
+    <div class="relative w-32 h-32 border-8 flex justify-center items-center transition-all .5s hover:scale-105">
+        <div class="absolute top-0 left-0 p-4">
+          <a href="/"><img src="/svg/logo-aux-torres-01.svg" alt="Logotipo de Auxiliar Manipuladora del Cartón"></a>
+        </div>
     </div>
 
     <nav class="flex flex-row flex-grow items-center border-red-400 border-8 justify-center">

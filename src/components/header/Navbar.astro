@@ -17,7 +17,7 @@ console.log(clase)
         title.map((item, index) => {
             return (
                 <div key={index.toString()}>
-                    <a class='lunes' href={link[index]}>{item}</a>
+                    <a href={link[index]}>{item}</a>
                 </div>
                 )
         })
@@ -39,14 +39,28 @@ console.log(clase)
     }
 
     a {
-        text-decoration: none;
+        transition: all 1s ease-in-out;
+        text-decoration-thickness: 3px;
+        text-decoration: underline;
+        text-underline-offset: 10px;
+        text-decoration-color: rgba(223, 172, 18,0);
     }
 
     a:hover {
-        text-decoration: underline;
-        /* text-decoration-thickness: 2px; */
-        text-underline-offset: 8px;
-        text-decoration-color: #b39800;
+        transition: all 1s ease-in-out;
+        animation-name: aparecer;
+        animation-duration: .6s;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes aparecer {
+        0% {
+        text-decoration-color: rgba(223, 172, 18,0);
+        }
+        100% {
+        text-decoration-color: rgba(223, 172, 18,1);
+        }
+
     }
 
 
