@@ -80,6 +80,8 @@ html.light{
     color: #202020;
 }
 
+
+
 /* Evitamos problemas con los pseudoelementos de quotes */
 blockquote:before,
 blockquote:after,

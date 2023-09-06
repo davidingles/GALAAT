@@ -14,13 +14,13 @@ console.log(clase)
 
 <div class=`${clase} flex gap-8`>
     {
-        title.map((item, index) => {
+        title.map((item, index ) => {
             return (
                 <div key={index.toString()}>
                     <a class="a" href={link[index]}>{item}</a>
                 </div>
                 )
-        })
+        }) 
     }
 </div>
 

@@ -10,26 +10,20 @@ import BtnShine from '../components/botones-sliders/BtnShine.astro';
 
 const title = 'Auxiliar Manipuladora del Cartón'
 ---
-<script>
-	const btn = document.querySelector("#shine") as HTMLElement
-	const carrusel = document.querySelector("#carrusel") as HTMLElement
-	btn.addEventListener('click', () => {
-		carrusel.classList.toggle('carrusel')
-	})
-</script>
+
 
 
 
 <Layout title={title}>
 
 	<div class="flex flex-col h-max-screen w-max-screen">
-		<div id="header">
+		<div id="header" class="fixed w-full z-50">
 			<Header />
 		</div>
 <!-- //BODY =================================================================================================		 -->
-		<main class="flex flex-col border-red-900 border-8 max-w-[80%] m-auto">
+		<main class="flex flex-col max-w-[80%] m-auto">
 			<!-- // SECCION 1 LOGO Y TEXTO ==================================================== -->
-				<div class="border-red-400 border-8 flex justify-center py-8">
+				<div class=" flex justify-center py-8">
 					<div  class="logo-grande w-2/3">
 		
 						<div class="mb-[4rem] p-12">
@@ -118,7 +112,7 @@ const title = 'Auxiliar Manipuladora del Cartón'
 				
 					</div>
 					<div class="absolute top-10 right-4 z-20 -rotate-90 scroll-smooth">
-						<BtnVolver />
+						<BtnVolver link="#header"/>
 					</div>
 				</div>
 
@@ -138,8 +132,8 @@ const title = 'Auxiliar Manipuladora del Cartón'
 
 					</section>
 				
-					<p class="absolute z-20 top-20 left-20 w-1/3 h-[200px]">
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus fuga corrupti facilis saepe perspiciatis voluptate adipisci, tenetur recusandae deleniti dolores architecto officiis eligendi quam? Adipisci cupiditate illum iste vel quas!
+					<p class="absolute z-20 top-20 left-20 w-1/3 h-[200px] text-white indent-7">
+						Nuestra flota de vehiculos nos permite realizar entregas en un plazo de 24 horas en la provincia de Murcia y en un plazo de 48 horas en el resto de la peninsula.
 					</p>
 					<div class="absolute top-10 right-4 z-20 -rotate-90 scroll-smooth">
 						<BtnVolver link="/#header" />
@@ -284,10 +278,24 @@ const title = 'Auxiliar Manipuladora del Cartón'
   </script>
   
 <!-- //CARRUSEL ================================================================================================== -->
+
+<script>
+	const btn = document.querySelector("#shine") as HTMLElement
+	const carrusel = document.querySelector("#carrusel") as HTMLElement
+	const op = 1 * 50 / 100
+	btn.addEventListener('click',()=>{
+		carrusel.classList.toggle('carrusel')
+	})
+
+console.log(op)
+
+</script>
+
 <style>
 	.carrusel{
 		transition: all 1s ease-in-out;
-		transform: translateX(-100%);
+		transform: `translateX(${op}%)`;
 	}
 
 </style>
+

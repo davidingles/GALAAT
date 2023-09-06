@@ -8,21 +8,22 @@ const clase = 'en-linea'
 ---
 
 
-<div class="flex">
-    <div class="relative w-32 h-32 border-8 flex justify-center items-center transition-all .5s hover:scale-105">
+<div class="flex ">
+
+    <div class="relative w-[10%] h-32 flex justify-center items-center transition-all .5s hover:scale-105">
         <div class="absolute top-0 left-0 p-4">
           <a href="/"><img src="/svg/logo-aux-torres-01.svg" alt="Logotipo de Auxiliar Manipuladora del Cartón"></a>
         </div>
     </div>
 
-    <nav class="flex flex-row flex-grow items-center border-red-400 border-8 justify-center">
-        <div class="relative flex flex-grow h-full border-blue-400 border-4 justify-center items-center">
-            <div class="absolute top-4 right-4">
+    <nav class=" flex flex-row flex-grow items-centerjustify-center">
+        <div class="relative flex flex-grow h-full justify-center items-center">
+            <div class="david bg-[#202020] absolute top-0 left-0 right-0 w-full p-2">
                 <Navbar title={nav} clase={clase} link={link} />
             </div>
         </div>
 
-        <div class="relative flex justify-center h-full border-8 w-48">
+        <div class="relative h-full w-[10%]">
             <div class="absolute top-2 right-4 z-20">
                 <SliderToggleTheme />
             </div>
@@ -53,4 +54,11 @@ const clase = 'en-linea'
   animation-fill-mode: both;
 }
 
+</style>
+
+<style>
+
+	:global(.light) .david{
+		background-color: #f2f2f2;
+	}
 </style>
