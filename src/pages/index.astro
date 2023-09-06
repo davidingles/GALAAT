@@ -5,12 +5,18 @@ import Footer from '../components/footer/Footer.astro'
 import BtnAdelante from '../components/botones-sliders/BtnAdelante.astro';
 import BtnVolver from '../components/botones-sliders/BtnVolver.astro';
 import TarjetasMario from '../components/cards/TarjetasMario.astro';
-import Camion from '../components/Camion.astro';
+import BtnSun from '../components/botones-sliders/BtnSun.astro';
+import BtnShine from '../components/botones-sliders/BtnShine.astro';
 
 const title = 'Auxiliar Manipuladora del Cartón'
-
 ---
-
+<script>
+	const btn = document.querySelector("#shine") as HTMLElement
+	const carrusel = document.querySelector("#carrusel") as HTMLElement
+	btn.addEventListener('click', () => {
+		carrusel.classList.toggle('carrusel')
+	})
+</script>
 
 
 
@@ -21,20 +27,25 @@ const title = 'Auxiliar Manipuladora del Cartón'
 			<Header />
 		</div>
 <!-- //BODY =================================================================================================		 -->
-		<main class="flex flex-col border-red-900 border-8">
+		<main class="flex flex-col border-red-900 border-8 max-w-[80%] m-auto">
 			<!-- // SECCION 1 LOGO Y TEXTO ==================================================== -->
 				<div class="border-red-400 border-8 flex justify-center py-8">
 					<div  class="logo-grande w-2/3">
 		
-						<div class="mb-[4rem] border-green-400 border-4 p-12">
+						<div class="mb-[4rem] p-12">
 							<img class="w-54 h-54" src="/svg/logo-aux.svg" alt="">
 						</div>
-		
-		
-						<div>
-							<p class="logo">
-								Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias dignissimos illo nam rerum itaque assumenda! Optio, corporis amet, ut facere molestiae necessitatibus error aliquam dolore earum provident non id quos?
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit labore et porro assumenda at, aliquid ipsam maxime aspernatur eum voluptatum odio ea necessitatibus dolore adipisci, mollitia reiciendis recusandae, voluptate a.
+						
+						
+						<div class="logo">
+							<div>
+								<p class="text-[var(--auxiliar1)] font-extrabold text-2xl">
+									968 10 10 10
+								</p>
+							</div>
+							<p class="indent-10">
+								Empresa dedicada a la fabricación de envases y embalajes de cartón ondulado y otros productos relacionados con el embalaje.
+								Cajas, bandejas, estuches, expositores, separadores, plancha paletizaje, etc.
 							</p>
 							<div class="mt-4 mb-60">
 								<a href="/catalogo">
@@ -45,22 +56,47 @@ const title = 'Auxiliar Manipuladora del Cartón'
 					</div>
 				</div>
 		
-			<!-- // SECCION 2 IMAGEN Y TEXTO ==================================================== -->
-				<div id="nave" class="border-green-400 border-4">
-					<div class="transition-opacity duration-300 relative">
-						<img
-							id="img-nave"
-							class="w-full h-full object-cover"
-							src="/img/nave.jpg" alt="foto de la nave de Auxiliar Manipuladora del Cartón"
-						>
+			<!-- // SECCION 2 IMAGEN NAVE Y TEXTO ==================================================== -->
+				<div id="nave">
+					<div class="transition-opacity duration-300 relative overflow-hidden">
+						<div id="carrusel" class="flex flex-row ">
+							<img
+								id="img-nave"
+								class="w-full h-full object-cover"
+								src="/img/nave.jpg" alt="foto de la nave de Auxiliar Manipuladora del Cartón"
+							>
+							<img
+								id="img-nave"
+								class="w-full h-full object-cover"
+								src="/img/nav.jpg" alt="foto de la nave de Auxiliar Manipuladora del Cartón"
+							>
+						</div>
 
-						<div id="ventana" class="absolute z-10 top-10 h-[200px] left-20 w-1/3 bg-white p-8 rounded-lg opacity-0 shadow-2xl cursor-pointer hover:shadow-none overflow-y-hidden">
+						<div 
+							id="ventana" 
+							class="absolute z-10 top-10 h-[250px]  left-20 w-1/3 bg-opacity-70 backdrop-blur-sm bg-white p-8 rounded-lg opacity-0 shadow-2xl cursor-pointer hover:shadow-none overflow-y-hidden flex flex-col justify-center items-center"
+						>
 							<p class="martes text-black">
-								Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor praesentium aut, laudantium nostrum incidunt natus amet, libero facilis voluptatem, doloremque ea dolorum consequatur quidem quibusdam veritatis facere magni perspiciatis vero.
+								Auxiliar Manipuladora del Cartón, S.L. fue fundada en 1995 como una empresa familiar, aValada con la experiencia de más de una década de trabajo en el sector de sus fundadores. 
 							</p>
+
+
+							<div>
+								<div id="shine" class="absolute bottom-2 right-2">
+									<BtnShine />
+								</div>
+								<div id="shine2" class="absolute bottom-2 left-2 rotate-180">
+									<BtnShine />
+								</div>
+								<div id="shine2" class="absolute bottom-2 left-2 rotate-180">
+									<BtnShine />
+								</div>
+							</div>
+
+
 						</div>
 						<div class="absolute top-10 right-4 z-20 -rotate-90 scroll-smooth">
-							<BtnVolver />
+							<BtnVolver link="/#header"/>
 						</div>
 
 					</div>
@@ -89,27 +125,29 @@ const title = 'Auxiliar Manipuladora del Cartón'
 				<!-- // SECCION CAMION ==================================================== -->
 				<div id="camion" class="border-violet-400 border-4 relative">
 					<section
-					class='h-screen w-screen relative overflow-hidden flex flex-col items-center'
-				>
-					<video
-							id="miVideo"
-							class='h-full brightness-50'
-							muted
-							autoplay
-							loop
-							src='/videos/camion.mp4'
-						></video>
-				</section>
+						class='relative overflow-hidden flex flex-col items-center'
+					>
+						<video
+								id="miVideo"
+								class='h-full brightness-50 object-cover'
+								muted
+								autoplay
+								loop
+								src='/videos/camion.mp4'
+						/ >
+
+					</section>
 				
 					<p class="absolute z-20 top-20 left-20 w-1/3 h-[200px]">
 						Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus fuga corrupti facilis saepe perspiciatis voluptate adipisci, tenetur recusandae deleniti dolores architecto officiis eligendi quam? Adipisci cupiditate illum iste vel quas!
 					</p>
 					<div class="absolute top-10 right-4 z-20 -rotate-90 scroll-smooth">
-						<BtnVolver />
+						<BtnVolver link="/#header" />
 					</div>
 				</div>
 		</main>
 
+<!-- //FOOTER =================================================================================================		 -->
 		<div class="border-8 flex justify-center items-center h-[22rem] bg-[#202020] text-[#f2f2f2]">
 			<Footer />
 		</div>
@@ -117,6 +155,7 @@ const title = 'Auxiliar Manipuladora del Cartón'
 
 </Layout>
 
+<!-- //ANIMACION PARA EL UNDERLINE DEL NAVBAR ================================================================================================= -->
 <style>
 
 	.logo-grande{
@@ -174,6 +213,7 @@ const title = 'Auxiliar Manipuladora del Cartón'
 
 </style>
 
+<!-- // ANIMACION PARA LA VENTANA DE LA NAVE ================================================================================================= -->
 <style>
 	.ventana{
 		transition: all 1s ease-in-out;
@@ -212,6 +252,7 @@ const title = 'Auxiliar Manipuladora del Cartón'
 	
 </style>
 
+<!-- //OBSERVER PARA OSCURECER LA IMAGEN DE LA NAVE Y APARECER LA VENTANA ================================================================================================= -->
 <script>
 	const nave = document.querySelector("#nave") as HTMLElement
 	const ventana = document.querySelector("#ventana") as HTMLElement
@@ -242,3 +283,11 @@ const title = 'Auxiliar Manipuladora del Cartón'
 	observer.observe(nave)
   </script>
   
+<!-- //CARRUSEL ================================================================================================== -->
+<style>
+	.carrusel{
+		transition: all 1s ease-in-out;
+		transform: translateX(-100%);
+	}
+
+</style>

@@ -17,7 +17,7 @@ console.log(clase)
         title.map((item, index) => {
             return (
                 <div key={index.toString()}>
-                    <a href={link[index]}>{item}</a>
+                    <a class="a" href={link[index]}>{item}</a>
                 </div>
                 )
         })
@@ -28,41 +28,22 @@ console.log(clase)
 
 <style>
 
-    .en-linea{
-        display: flex;
-        flex-direction: row;
-    }
 
-    .en-columnas{
-        display: flex;
-        flex-direction: column;
-    }
-
-    a {
-        transition: all 1s ease-in-out;
-        text-decoration-thickness: 3px;
-        text-decoration: underline;
-        text-underline-offset: 10px;
-        text-decoration-color: rgba(223, 172, 18,0);
-    }
-
-    a:hover {
-        transition: all 1s ease-in-out;
-        animation-name: aparecer;
-        animation-duration: .6s;
+    .a:hover {
+        text-decoration: none;
+        animation-name: under;
         animation-fill-mode: forwards;
     }
 
-    @keyframes aparecer {
+    @keyframes under {
         0% {
-        text-decoration-color: rgba(223, 172, 18,0);
+            text-decoration: none
         }
         100% {
-        text-decoration-color: rgba(223, 172, 18,1);
+            text-decoration: underline;
+            text-underline-offset: 0.2em;
         }
-
     }
-
 
 </style>
 
