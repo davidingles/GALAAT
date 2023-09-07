@@ -1,7 +1,7 @@
 :root {
 	@font-face {
 		font-family: 'ITC Eras Demi';
-		src: url('/ITC Eras Demi.ttf');
+		src: url('/tipos/ITC Eras Demi.ttf');
 	}
 
 	--negro: rgb(39, 39, 39);
