@@ -5,13 +5,9 @@ import Footer from '../components/footer/Footer.astro'
 import BtnAdelante from '../components/botones-sliders/BtnAdelante.astro';
 import TarjetasMario from '../components/cards/TarjetasMario.astro';
 import Carrusel from '../components/carrusel/Carrusel.astro'
-import BtnShine from '../components/botones-sliders/BtnShine.astro';
 
 const title = 'Auxiliar Manipuladora del Cartón'
 ---
-
-
-
 
 <Layout title={title}>
 
@@ -22,14 +18,13 @@ const title = 'Auxiliar Manipuladora del Cartón'
 <!-- //BODY =================================================================================================		 -->
 		<main class="flex flex-col max-w-[80%] m-auto">
 
-			<!-- // SECCION 1 LOGO Y TEXTO ==================================================== -->
+<!-- // SECCION 1 LOGO Y TEXTO ==================================================== -->
 				<div class="flex justify-center items-center py-8 h-screen">
-					<div  class="logo-grande w-2/3 h-full flex flex-col items-center justify-center">
+					<div  class="logo-grande w-2/3 h-2/3 flex flex-col items-center">
 		
 						<div class="mb-[4rem] p-12">
-							<img class="w-54 h-54" src="/svg/logo-aux.svg" alt="">
+							<img class="w-42 h-42" src="/svg/logo-aux.svg" alt="">
 						</div>
-						
 						
 						<div class="logo">
 							<div class="flex justify-center">
@@ -37,7 +32,7 @@ const title = 'Auxiliar Manipuladora del Cartón'
 									968 693 575
 								</p>
 							</div>
-							<p class="tipografia indent-10 text-2xl">
+							<p class="tipografia indent-10 text-xl font-light">
 								Empresa dedicada a la fabricación de envases y embalajes de cartón ondulado y otros productos relacionados con el embalaje.
 								Cajas, bandejas, estuches, expositores, separadores, plancha paletizaje, etc.
 							</p>
@@ -47,15 +42,18 @@ const title = 'Auxiliar Manipuladora del Cartón'
 								</a>
 							</div>
 						</div>
+
 					</div>
 				</div>
 		
-			<!-- // SECCIOn2 CARRUSELL ==================================================== -->
+<!-- // SECCIOn2 CARRUSELL ==================================================== -->
+			<div id="nave" class="min-h-screen flex justify-center items-center">
+				<div class="h-[44%] flex flex-row ">
+					<Carrusel />
+				</div>
+			</div>
 
-			<Carrusel />
-
-
-				<!-- // SECCION CONTACTOS ====================================================  -->
+<!-- // SECCION CONTACTOS ====================================================  -->
 				<div id="contacto" class= "relative">
 					<div  class="flex flex-col">
 						<main id="contactooo" class="w-full min-h-screen flex">
@@ -81,7 +79,7 @@ const title = 'Auxiliar Manipuladora del Cartón'
 					</div> -->
 				</div>
 
-				<!-- // SECCION CAMION ==================================================== -->
+<!-- // SECCION CAMION ==================================================== -->
 				<div id="camion" class=" relative">
 					<section
 						class='relative overflow-hidden flex flex-col items-center'
@@ -237,14 +235,6 @@ const title = 'Auxiliar Manipuladora del Cartón'
 
 
 </style>
-
-
-
-
-  
-
-
-
 
 <!-- // TEMA OSCURO ==================================================================================================  -->
 <style>
