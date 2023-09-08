@@ -61,28 +61,35 @@ const title = 'Auxiliar Manipuladora del Cartón'
 								<a id="scroll-to-camion" href="#admi">
 									<TarjetasMario telefono="686 944 932" jefes="administracion" />
 								</a>
-								<a id="scroll-to-camion" href="#cajas">
+								<a id="scroll-to-camion2" href="#cajas">
 									<TarjetasMario telefono="657 803 024" jefes="ventas" />
 								</a>
-								<a id="scroll-to-camion" href="#camion">
+								<a id="scroll-to-camion3" href="#camion">
 									<TarjetasMario telefono="657 803 024" jefes="logistica" />
 								</a>
-								<a id="scroll-to-camion" href="#diseñando">
+								<a id="scroll-to-camion4" href="#diseñando">
 									<TarjetasMario telefono="657 803 024" jefes="diseño" />
 								</a>
 							</div>
 						</main>
 				
 					</div>
-					<!-- <div class="absolute top-10 right-4 z-20 -rotate-90 scroll-smooth">
-						<BtnVolver link="#header"/>
-					</div> -->
+---
+<script>
+	const cam = document.getElementById('scroll-to-camion');
+	const admini = document.getElementById('admini');
+	cam.addEventListener('click', () => {
+		console.log('hola')
+		admini.classList.add('animate-bounce')
+	});
+</script>
+---
 				</div>
 
 <!-- // SECCION CAMION ==================================================== -->
-				<div id="camion" class=" relative">
+				<div id="camion" class=" relative flex flex-col justify-center">
 					<section
-						class='relative overflow-hidden flex flex-col items-center'
+						class='relative min-w-screen flex flex-col items-center  my-56'
 					>
 						<video
 								id="miVideo"
@@ -104,7 +111,7 @@ const title = 'Auxiliar Manipuladora del Cartón'
 				</div>
 				<div id="cajas" class=" relative">
 					<section
-						class='relative overflow-hidden flex flex-col items-center'
+						class='relative overflow-hidden flex flex-col items-center my-56'
 					>
 						<video
 								id="miVideo"
@@ -126,7 +133,7 @@ const title = 'Auxiliar Manipuladora del Cartón'
 				</div>
 				<div id="admi" class=" relative">
 					<section
-						class='relative overflow-hidden flex flex-col items-center'
+						class='relative overflow-hidden flex flex-col items-center my-56'
 					>
 						<video
 								id="miVideo"
@@ -139,8 +146,8 @@ const title = 'Auxiliar Manipuladora del Cartón'
 
 					</section>
 				
-					<p class="absolute z-20 top-20 left-20 w-1/3 h-[200px] text-white indent-7">
-						Nuestra flota de vehiculos nos permite realizar entregas en un plazo de 24 horas en la provincia de Murcia y en un plazo de 48 horas en el resto de la peninsula.
+					<p id="admini" class="absolute z-20 top-20 left-20 w-1/3 h-[200px] text-white indent-7">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus nobis eligendi laborum porro corrupti! Neque tenetur aut ad enim, possimus quam id nihil labore necessitatibus dolorem tempore corrupti fugit cumque.
 					</p>
 					<!-- <div class="absolute top-10 right-4 z-20 -rotate-90 scroll-smooth">
 						<BtnVolver link="/#header" />
@@ -148,7 +155,7 @@ const title = 'Auxiliar Manipuladora del Cartón'
 				</div>
 				<div id="diseñando" class=" relative">
 					<section
-						class='relative overflow-hidden flex flex-col items-center'
+						class='relative overflow-hidden flex flex-col items-center my-56'
 					>
 						<video
 								id="miVideo"
