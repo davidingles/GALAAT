@@ -1,0 +1,76 @@
+
+---
+import Aviso from './Aviso.astro'
+
+export interface Props {
+    modalBg?: string;
+    modalText?: string
+}
+
+const { modalBg, modalText} = Astro.props;
+
+---
+
+
+
+<!-- MODAL CON TODO EL PARRAFO =======================   -->
+    <div class="flex flex-col">
+
+      <Aviso modalBg={modalBg} modalText={modalText} />
+
+    </div>
+</div>
+
+
+<!-- AVISO LEGAL ======================= -->
+
+
+
+<script>
+      const modal1 = document.querySelector('.modal1')
+      const boton = document.querySelector('.boton')
+      const aviso = document.querySelector('.aviso')
+      aviso.addEventListener('click', () => {
+          modal1.classList.remove('top-full')
+          modal1.classList.add('top-0')
+          modal1.classList.remove('animate-slide-down')
+          modal1.classList.add('animate-slide-up')
+          // modal1.classList.add('pointer-events-none')
+          // modal1.classList.remove('bg-opacity-100')
+          // modal1.classList.add('animate-slide-up')
+      })
+      boton.addEventListener('click', () => {
+          modal1.classList.remove('top-0')
+          modal1.classList.add('top-full')
+          modal1.classList.remove('animate-slide-up')
+          modal1.classList.add('animate-slide-down')
+      })
+  
+</script>
+
+<style>
+    .animate-slide-up {
+      animation: slideUp 1s ease-in-out;
+    }
+  
+    @keyframes slideUp {
+      0% {
+        transform: translateY(100%);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+    .animate-slide-down {
+      animation: slideDown 1s ease-in-out;
+    }
+  
+    @keyframes slideDown {
+      0% {
+        transform: translateY(-100%);
+      }
+      100% {
+        transform: translateY(0%);
+      }
+    }
+  </style>
