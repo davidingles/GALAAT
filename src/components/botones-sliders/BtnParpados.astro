@@ -1,4 +1,4 @@
-<button class="btn"> 
+<button id="btn-aviso" class="btn"> 
 
     <p>
         Aviso Legal | Política de Privacidad | Política de Cookies
@@ -10,9 +10,16 @@
 </button>
 
 <style>
+    :global(.light) .btn{
+        --color: black;
+        --color2: var(--auxiliar1);
+    }
+</style>
+
+<style>
     .btn {
- --color: #202020;
- --color2: rgb(223, 172, 18);
+ --color: #919191;
+ --color2: rgb(0, 0, 0);
  padding: 0.8em 1.75em;
  background-color: transparent;
  border-radius: 6px;
