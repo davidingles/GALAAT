@@ -3,6 +3,10 @@
 		font-family: 'ITC Eras Demi';
 		src: url('/tipos/ITC Eras Demi.ttf');
 	}
+	@font-face {
+		font-family: 'Eras-Medium-Medium';
+		src: url('/tipos/Eras-Medium-Medium.ttf');
+	}
 
 	--negro: rgb(39, 39, 39);
 	--blanco: rgb(222, 222, 222);
@@ -19,6 +23,7 @@
 	--tipo-secundaria: 'Open Sans', sans-serif;
 	--tipo-terciaria: 'Roboto', sans-serif;
 	--tipo-erasdemi: 'ITC Eras';
+	--tipo-erasdemimedium: 'Eras-Medium-Medium';
 }
 
 /* Las adaptamos al modo oscuro */

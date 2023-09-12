@@ -1,11 +1,12 @@
 ---
-import LayoutHeaderFooter from "../layouts/LayoutHeaderFooter.astro";
+import Header from "../components/header/Header.astro";
+import Layout from "../layouts/Layout.astro";
+
+const title = "Catalogo de caja de la Auxilir Mainpulaoda del cartón"
 ---
 
-<LayoutHeaderFooter title="Información sobre la Auxiliar">
-    <div class="max-w-screen h-screen">
-        estoy en el catalogo
-    </div>
-</LayoutHeaderFooter>
-
-
+<Layout title={title}>
+    <div class="relative flex flex-col h-max-screen w-max-screen">
+		<div id="header" class="fixed w-full z-20">
+			<Header />
+		</div>
