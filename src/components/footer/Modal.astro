@@ -1,24 +1,14 @@
-
 ---
 import Aviso from './Aviso.astro'
 
-export interface Props {
-    modalBg?: string;
-    modalText?: string
-}
-
-const { modalBg, modalText} = Astro.props;
-
+import BtnHover01 from '../botones-sliders/BtnHover01.astro';
 ---
 
-
-
 <!-- MODAL CON TODO EL PARRAFO =======================   -->
-    <div class="flex flex-col">
+<div class="fixed z-50 top-20 right-20"><BtnHover01 /></div>
+<div class="fixed z-40 top-[20vh] right-0 left-0 w-2/3 h-[90vh] m-auto"><Aviso/></div>
+<div class="fixed z-30 bg-gray-400 bg-opacity-30 backdrop-blur-sm w-full h-full border-red-400 border-8 top-0 bottom-0"></div>
 
-      <Aviso modalBg={modalBg} modalText={modalText} />
-
-    </div>
 </div>
 
 

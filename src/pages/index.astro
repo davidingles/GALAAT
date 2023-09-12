@@ -5,15 +5,14 @@ import Footer from '../components/footer/Footer.astro'
 import BtnAdelante from '../components/botones-sliders/BtnAdelante.astro';
 import TarjetasMario from '../components/cards/TarjetasMario.astro';
 import Carrusel from '../components/carrusel/Carrusel.astro'
-import Aviso from '../components/footer/Aviso.astro';
-
+import Modal from '../components/footer/Modal.astro';
 const title = 'Auxiliar Manipuladora del Cartón'
 ---
 
 <Layout title={title}>
 
 	<div class="relative flex flex-col h-max-screen w-max-screen">
-		<div id="header" class="fixed w-full z-50">
+		<div id="header" class="fixed w-full z-20">
 			<Header />
 		</div>
 <!-- //BODY =================================================================================================		 -->
@@ -187,13 +186,10 @@ const title = 'Auxiliar Manipuladora del Cartón'
 		</main>
 		<!-- //FOOTER =================================================================================================		 -->
 		<div class="relative flex justify-center items-center h-[22rem] bg-[#303030] text-[#808080]">
-				<Footer />
-				<div id="aviso" class="absolute m-auto -top-[40vh] bottom-0 z-50 w-2/3 right-0 left-0">
-		
-					<Aviso />
-				</div>
+			<Footer />
 		</div>
----
+		<Modal />
+
 <script>
 	const aviso = document.getElementById('aviso');
 	// const btn = document.getElementById('btn-aviso');
@@ -205,7 +201,7 @@ const title = 'Auxiliar Manipuladora del Cartón'
 		console.log('hola')
 	})
 </script>
----
+
 
 
 
