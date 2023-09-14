@@ -1,7 +1,6 @@
 ---
 import { books } from "../data/books.js";
 import Layout from "../layouts/Layout.astro";
-import ListOfBooks from "../components/book/ListOfBooks.astro";
 import ObtenerComponenteJsx from "../components/book/ObtenerComponenteJsx.astro";
 import BtnEstrellas from "../components/botones-sliders/BtnEstrellas.astro";
 
@@ -22,10 +21,10 @@ export function getStaticPaths() {
 }
 ---
 
-<Layout>
+<Layout title={bookData.id}>
 
-<main class="flex flex-col justify-center items-center">
-    <a id="a" href="" class="flex flex-row">
+<main class="flex flex-col h-screen justify-center items-center relative">
+    <a id="a" href="" class="flex flex-row mb-4 absolute top-8 left-8">
         <BtnEstrellas>
                     <div class="">
                 <svg
@@ -35,13 +34,14 @@ export function getStaticPaths() {
                  </svg>
             </div>
         </BtnEstrellas>
+    </a>
         <div class="mb-24 text-3xl">
-            <h1>{bookData.title}</h1>
+            <h1 class="mb-4">{bookData.title}</h1>
+            <p class="text-lg">{bookData.opinion}</p>
         </div>
-    </a href="" id="btn">
     <div class="flex flex-col md:flex-row justify-center content-between">
-        <div class="w-1/3 rounded-2xl border-8"><img class="w-full h-full object-contain" src={bookData.img} alt=""></div>
-        <div class="w-1/3"><ObtenerComponenteJsx ancho="w-full h-full" componente_jsx={bookData.three} /></div>
+        <div class="w-[33rem] mr-8 aspect-square rounded-2xl border-8"><img class="w-full h-full object-cover" src={bookData.img} alt=""></div>
+        <div class="w-[22rem] aspect-square"><ObtenerComponenteJsx ancho="w-full h-full" componente_jsx={bookData.three} /></div>
     </div>
 </main>
 
@@ -49,7 +49,7 @@ export function getStaticPaths() {
 
 <script>
     const btn = document.getElementById('btn');
-    const a = document.getElementById('a');
+    const a = document.getElementById('a') as HTMLAnchorElement;
     btn.addEventListener("click", () => {
         console.log("click");
         a.href = "/catalogo"

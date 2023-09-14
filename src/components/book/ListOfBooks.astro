@@ -3,7 +3,7 @@ import BookItem from './BookItem.astro';
 import { books } from '../../data/books.js';
 ---
 
-<ul class="grid sm:grid-cols-2 md:grid-cols-6 gap-8 border-8 border-orange-400 justify-center place-content-center">
+<ul class="grid sm:grid-cols-2 md:grid-cols-4 gap-8 border-8 p-12 place-items-center m-auto">
     {
         books.map((book) => {
             return (
