@@ -1,12 +1,21 @@
 ---
 import Header from "../components/header/Header.astro";
 import Layout from "../layouts/Layout.astro";
+import ListOfBooks from "../components/book/ListOfBooks.astro";
+import Contador from "../components/Contador.jsx";
 
 const title = "Catalogo de caja de la Auxilir Mainpulaoda del cartón"
 ---
 
 <Layout title={title}>
     <div class="relative flex flex-col h-max-screen w-max-screen">
-		<div id="header" class="fixed w-full z-20">
+		<div id="" class="fixed w-full z-20 top-0">
 			<Header />
+
+			<Contador client:visible />
+
+			<ListOfBooks />
+
 		</div>
+	</div>
+</Layout>

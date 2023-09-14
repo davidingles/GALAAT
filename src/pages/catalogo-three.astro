@@ -1,0 +1,10 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Model from "../components/three/Model.jsx";
+---
+
+<Layout>
+    <div class="m-auto w-2/3 flex justify-center gap-4 h-auto rounded-[]">
+        <Model client:load />
+    </div>
+</Layout>

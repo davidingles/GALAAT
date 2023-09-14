@@ -1,0 +1,30 @@
+---
+import { books } from "../data/books.js";
+import Layout from "../layouts/Layout.astro";
+import ListOfBooks from "../components/book/ListOfBooks.astro";
+import ObtenerComponenteJsx from "../components/book/ObtenerComponenteJsx.astro";
+
+const { book } = Astro.params;
+const bookData = books.find((b) => b.id === book);
+if (!bookData) {
+    return Astro.redirect("/404")
+}
+
+// ESTA FUNCION DE callGetStaticPaths() ES NECESARIA PARA HACER EL BUILD
+// ========================================================================
+export function getStaticPaths() {
+  return [
+    {params: {book: "B1Cerrada"}},
+    {params: {book: "BandejaAacotada"}},
+    {params: {book: "EstucheConAsas"}},
+    {params: {book: "ExpositorDM"}},  ]
+}
+---
+
+<Layout>
+
+    <!-- <img src={bookData.img} alt=""> -->
+
+    <ObtenerComponenteJsx david={bookData.three} client:load />
+
+</Layout>
