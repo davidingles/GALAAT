@@ -1,0 +1,58 @@
+<button id="btn" class="btn relative"> 
+<div class=" flex flex-row items-center gap-4 p-2">
+    <slot />
+    <p>Estuche con Asas</p>
+</div>
+
+</button>
+
+<style>
+  .btn {
+    margin-right: 1rem;
+    padding: .2rem;
+ display: flex;
+ height: 50%;   
+ position: relative;
+ display: inline-block;
+ border-radius: 50%;
+ transition: all .2s;
+ border: none;
+ font-family: inherit;
+ font-weight: 500;
+ color: black;
+ background-color: white;
+}
+
+
+.btn:hover {
+ transform: translateY(-3px);
+ box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+ transform: translateY(-1px);
+ box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn::after {
+ content: "";
+ display: inline-block;
+ height: 100%;
+ width: 100%;
+ border-radius: 50px;
+ position: absolute;
+ top: 0;
+ left: 0;
+ z-index: -1;
+ transition: all .4s;
+}
+
+.btn::after {
+ background-color: #fff;
+}
+
+.btn:hover::after {
+ transform: scaleX(1.4) scaleY(1.6);
+ opacity: 0;
+}
+</style>

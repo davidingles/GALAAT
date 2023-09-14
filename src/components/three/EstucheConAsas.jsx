@@ -37,10 +37,9 @@ useGLTF.preload('/gltf/EstucheConAsas.gltf')
 
 const EstucheConAsas = ({ancho}) => {
 	return (
-		<div className={` ${ancho}`}>
 
 			<Canvas
-				// style={{ width: 'auto', margin: 'auto' }}
+				style={{ ancho }}
 				camera={{
 					view: {
 						enabled: true,
@@ -56,7 +55,7 @@ const EstucheConAsas = ({ancho}) => {
 					zoom: 6,
 					position: [0, 0.5, 1.5]
 				}} >
-				<ambientLight intensity={0.6} />
+				<ambientLight intensity={1} />
 				<pointLight position={[10, 10, 10]} />
 				<Suspense fallback={null}>
 
@@ -66,7 +65,6 @@ const EstucheConAsas = ({ancho}) => {
 				<OrbitControls autoRotate autoRotateSpeed={1} />
 				<ContactShadows resolution={1024} scale={1} position={[0, -0.03, 0]} blur={2} opacity={0.6} far={1} color='#8a6246' />
 			</Canvas>
-		</div>
 	)
 }
 export default EstucheConAsas
