@@ -1,34 +1,21 @@
 ---
+// ESTE COMPONENTE ES PARA CARGAR LOS COMPONENTES DE TRES DIMENSIONES PUESTO 
+// QUE NO SE RECORRER LOS COMPONENTE DE UNA CARPETA
 
 import B1Cerrada from "../three/B1Cerrada";
 import BandejaAcotada from "../three/BandejaAcotada";
 import EstucheConAsas from "../three/EstucheConAsas";
 
-const { david } = Astro.props
+const { componente_jsx } = Astro.props
 
-
-// let Component
-// switch (info.three) {
-//   case "EstucheConAsas":
-//     Component = EstucheConAsas
-//     break
-//   case "BandejaAcotada":
-//     Component = BandejaAcotada
-//     break
-//   case "B1Cerrada":
-//     Component = B1Cerrada
-//     break
-//   default:
-//     throw new Error(`Componente desconocido: ${info.three}`)
-// }
 ---
 
     {
-        david === "EstucheConAsas" ? <EstucheConAsas client:load /> : null
+        componente_jsx === "EstucheConAsas" ? <EstucheConAsas client:visible /> : null
     }
     {
-        david === "BandejaAcotada" ? <BandejaAcotada client:load /> : null
+        componente_jsx === "BandejaAcotada" ? <BandejaAcotada client:visible /> : null
     }
     {
-        david === "B1Cerrada" ? <B1Cerrada client:load /> : null
+        componente_jsx === "B1Cerrada" ? <B1Cerrada client:visible /> : null
     }

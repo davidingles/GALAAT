@@ -35,9 +35,9 @@ useGLTF.preload('/gltf/EstucheConAsas.gltf')
 
 
 
-const EstucheConAsas = () => {
+const EstucheConAsas = ({ancho}) => {
 	return (
-		<div className='border-8'>
+		<div className={` ${ancho}`}>
 
 			<Canvas
 				// style={{ width: 'auto', margin: 'auto' }}
