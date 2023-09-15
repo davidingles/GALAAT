@@ -24,7 +24,7 @@ export function getStaticPaths() {
 <Layout title={bookData.id}>
 
 <main class="flex flex-col h-screen justify-center items-center relative">
-    <a id="a" href="" class="flex flex-row mb-4 absolute top-8 left-8">
+    <a id="anchor" href="" class="flex flex-row mb-4 absolute top-8 left-8">
         <BtnEstrellas>
             <div class="">
                 <svg
@@ -49,10 +49,10 @@ export function getStaticPaths() {
 
 <script>
     const btn = document.getElementById('btn');
-    const a = document.getElementById('a') as HTMLAnchorElement;
+    const anchor = document.getElementById('anchor') as HTMLElement;
     btn.addEventListener("click", () => {
         console.log("click");
-        a.href = "/catalogo"
+        anchor.setAttribute.href = "/catalogo"
 
     });
 </script>
