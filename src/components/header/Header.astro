@@ -4,7 +4,6 @@ import SliderToggleTheme from '../botones-sliders/SliderToggleTheme.astro'
 
 const nav = ['Inicio', 'Acerca de nosotros', 'Contacto', 'Catálogo']
 const link = ['/','/#nave', '/#contacto', '/catalogo']
-const clase = 'en-linea'
 ---
 
 
@@ -19,7 +18,7 @@ const clase = 'en-linea'
     <nav class=" flex flex-row flex-grow items-centerjustify-center">
         <div class="relative flex flex-grow h-full">
             <div class="david bg-[#202020] absolute top-0 right-0 w-full p-2">
-                <Navbar title={nav} clase={clase} link={link} />
+                <Navbar title={nav} link={link} />
             </div>
         </div>
 

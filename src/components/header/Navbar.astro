@@ -1,16 +1,15 @@
 ---
 interface Props {
     title?: string[]
-    clase?: string
     link?: string[]
 }
 
 
-const { title, clase, link } = Astro.props
+const { title, link } = Astro.props
 
 ---
 
-<div class=`${clase} flex gap-8 justify-end tipo text-xl`>
+<div class="flex gap-8 justify-end tipo text-xl">
     {
         title.map((item, index ) => {
             return (
@@ -38,7 +37,7 @@ const { title, clase, link } = Astro.props
         100% {
             text-decoration: underline;
             text-decoration-color: var(--auxiliar1);
-            text-underline-offset: 1rem;
+            text-underline-offset: .2rem;
             text-decoration-thickness: 2px;
         }
     }
