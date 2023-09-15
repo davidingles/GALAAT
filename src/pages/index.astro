@@ -6,6 +6,7 @@ import BtnAdelante from '../components/botones-sliders/BtnAdelante.astro';
 import TarjetasMario from '../components/cards/TarjetasMario.astro';
 import Carrusel from '../components/carrusel/Carrusel.astro'
 import Modal from '../components/footer/Modal.astro';
+import TextoAnimadoTelefono from '../components/botones-sliders/TextoAnimadoTelefono.astro';
 const title = 'Auxiliar Manipuladora del Cartón'
 ---
 
@@ -22,15 +23,16 @@ const title = 'Auxiliar Manipuladora del Cartón'
 				<div class="flex justify-center items-center py-8 h-screen">
 					<div  class="logo-grande w-2/3 h-2/3 flex flex-col items-center">
 		
-						<div class="mb-[4rem] p-12">
-							<img class="w-42 h-42" src="/svg/logo-aux.svg" alt="">
+						<div class="mb-[4rem]">
+							<img class="w-auto h-auto" src="/svg/logo-aux.svg" alt="">
 						</div>
 						
 						<div class="logo">
-							<div class="flex justify-center">
-								<p class="text-[var(--auxiliar1)] font-extrabold text-2xl">
+							<div class="flex justify-center mb-4">
+								<TextoAnimadoTelefono />
+								<!-- <p class="text-[var(--auxiliar1)] font-extrabold text-2xl">
 									968 693 575
-								</p>
+								</p> -->
 							</div>
 							<p class="tipografia indent-10 text-xl font-light">
 								Empresa dedicada a la fabricación de envases y embalajes de cartón ondulado y otros productos relacionados con el embalaje.
@@ -56,8 +58,10 @@ const title = 'Auxiliar Manipuladora del Cartón'
 <!-- // SECCION CONTACTOS ====================================================  -->
 				<div id="contacto" class= "relative ">
 					<div  class="flex flex-col">
-						<main id="contactooo" class="w-full min-h-screen flex">
+						<main id="contactooo" class="relative w-full min-h-screen flex">
+							<span class="absolute top-12 left-12 text-3xl text-[var(--auxiliar1)]">968 693 675</span>
 							<div class="david text-[var(--auxiliar2)] flex flex-wrap gap-8 m-auto justify-center items-center">
+								<!-- <TextoAnimadoTelefono /> -->
 								<a id="scroll-to-camion" href="#admi">
 									<TarjetasMario telefono="686 944 932" jefes="administracion" />
 								</a>
