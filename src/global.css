@@ -129,6 +129,7 @@ body {
 	/* opcional */
 	-moz-osx-font-smoothing: grayscale;
 
+	hyphens: none;
 
 }
 .dil-barra-desplazamiento{

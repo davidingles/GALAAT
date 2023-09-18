@@ -10,7 +10,7 @@ const link = ['/','/#nave', '/#contacto', '/catalogo']
 <div class="flex ">
 
     <div class="relative w-[10%] h-32 flex justify-center items-center transition-all .5s hover:scale-105">
-        <div class="absolute top-0 left-0 p-4">
+        <div class="logo-grande absolute top-0 left-0 p-4">
           <a href="/"><img src="/svg/logo-aux-torres-01.svg" alt="Logotipo de Auxiliar Manipuladora del Cartón"></a>
         </div>
     </div>
@@ -31,6 +31,12 @@ const link = ['/','/#nave', '/#contacto', '/catalogo']
 </div>
 
 <style>
+  	.logo-grande{
+		animation-name: fadeInLeft;
+		animation-duration: .8s;
+		animation-fill-mode: both;
+	}
+
 
 @keyframes fadeInLeft {
   from {
@@ -49,10 +55,9 @@ const link = ['/','/#nave', '/#contacto', '/catalogo']
 }
 
 .fadeInLeft {
-  animation-duration: 1s;
+  /* animation-duration: 1s; */
   animation-fill-mode: both;
 }
-
 </style>
 
 <style>
