@@ -7,9 +7,9 @@ import { books } from '../../data/books.js';
         {
             books.map((book) => {
                 return (
-                    <button class="card aspect-square">
+                    <ul class="card aspect-square">
                         <BookItem id={book.id} title={book.title} img={book.img} three={book.three} />
-                    </button>
+                    </ul>
                 )
             })
         }
