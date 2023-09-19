@@ -35,11 +35,11 @@ useGLTF.preload('/gltf/EstucheConAsas.gltf')
 
 
 
-const EstucheConAsas = ({ancho}) => {
+const EstucheConAsas = ({}) => {
 	return (
 
 			<Canvas
-				style={{ ancho }}
+				style={{  }}
 				camera={{
 					view: {
 						enabled: true,

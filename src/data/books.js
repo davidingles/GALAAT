@@ -34,5 +34,13 @@ export const books = [
 		author: 'Vicente Latorre',
 		three: 'ExpositorDM'
 
+	},
+	{
+		id: 'troquel1g0011',
+		title: 'Troquel 1g0011',
+		img: '/catalogo-png/troquel1g0011.png',
+		opinion: '"Estuche practo para el transporte del usuario final',
+		author: 'Vicente Latorre',
+		three: 'troquel1g0011'
 	}
 ]

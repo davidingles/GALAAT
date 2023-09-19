@@ -1,22 +1,27 @@
 ---
 
 export interface Props{
+    departamento?: string;
     telefono: string;
     jefes: 'vicente' | 'miguelAngel' | 'Jesus' | 'david' | 'Angelin' | 'diseño' | 'logistica' | 'ventas' | 'administracion' | 'maps';
 
 }
-const { telefono, jefes } = Astro.props;
+const { telefono, jefes, departamento } = Astro.props;
 
 ---
 
 
 <article class="relative w-[auto] h-auto transition-all duration-300 ease">
+
     <img class="" src=`./img/jefes/${jefes}.png` alt="foto del jefe">
-    <span class="absolute text-center font-bold bottom-0 left-0 right-0 m-auto whitespace-nowrap opacity-0 transform translate-y-20 transition-all duration-300 ease text-aux">{telefono}</span>
+    <span class="text-black absolute top-0 left-0 right-0 text-center text-xl m-auto whitespace-nowrap">{departamento}</span>
+    <span class="color-texto-david text-[var(--auxiliar2)] absolute text-center font-bold bottom-0 left-0 right-0 m-auto whitespace-nowrap opacity-0 transform translate-y-20 transition-all duration-300 ease text-2xl">{telefono}</span>
 </article>
 
 <style>
-
+    :global(.light) .color-texto-david{
+        color: var(--auxiliar1);
+    }
     article img{
         object-fit: cover;
         width: 100%;

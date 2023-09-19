@@ -13,9 +13,9 @@ const { id, src, texto, responsable } = Astro.props
 
 <section
     id={id}
-    class='min-w-screen min-h-screen flex flex-col items-center border-8 justify-center pt-20'
+    class='min-w-screen min-h-screen flex flex-col items-center justify-center pt-20'
 >
-    <div  class="camion w-2/3 h-[100px] text-gray-100 border-orange-400 border-4">
+    <div  class="camion w-2/3 h-[100px] text-gray-100 mb-4">
         <div class="flex flex-row gap-12">
             <p class="tipografia indent-7">
                 {texto}
@@ -27,7 +27,7 @@ const { id, src, texto, responsable } = Astro.props
     </div>
 
     
-    <div class="h-full border-red-400 border-4 w-full">
+    <div class="h-full w-full">
         <video
             class='brightness-50 object-cover'
             muted
