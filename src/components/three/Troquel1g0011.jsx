@@ -13,7 +13,7 @@ export function Dav(props) {
         material={nodes.Plane.material}
       />
       <group rotation={[Math.PI / 2, 0, 0]} scale={0.001}>
-        <group position={[0, 0, -134.091]}>
+        <group position={[0, 5, -250.091]}>
           <mesh
             castShadow
             receiveShadow
@@ -57,7 +57,7 @@ const Troquel1g0011 = ({}) => {
 					},
 					focus: 10,
 					fov: 80,
-					zoom: 4,
+					zoom: 3,
 					position: [0, 0.5, 1.5]
 				}} >
 				<ambientLight intensity={1} />

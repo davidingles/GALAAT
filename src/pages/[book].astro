@@ -38,7 +38,7 @@ export function getStaticPaths() {
 
 <Layout title={bookData.id}>
 
-    <main class="flex flex-col h-screen justify-center items-center relative">
+    <main class="three-fondo bg-[#202020] flex flex-col h-screen justify-center items-center relative">
         <a id="anchor" href="/catalogo" class="flex flex-row mb-4 absolute top-8 left-8">
             <BtnEstrellas>
                 <div class="">
@@ -56,13 +56,13 @@ export function getStaticPaths() {
             <p class="text-lg">{bookData.opinion}</p>
         </div>
 
-        <div class="flex flex-col md:flex-row justify-center content-between">
+        <div class="flex flex-col w-2/3 md:flex-row justify-center content-between">
 
-            <div class="w-[33rem] mr-8 aspect-square rounded-2xl border-8">
+            <div class=" mr-8 aspect-square rounded-2xl">
                 <img class="w-full h-full object-cover" src={bookData.img} alt="">
             </div>
 
-            <div class="w-[22rem] aspect-square">
+            <div class="aspect-square">
                 <ObtenerComponenteJsx ancho="w-full h-full" componente_jsx={bookData.three} />
             </div>
 
@@ -72,5 +72,29 @@ export function getStaticPaths() {
 </Layout>
 
 <style>
-    
+    :global(.light) .three-fondo{
+        background-color: #fff;
+    }
 </style>
+
+<script >
+
+    //COMPROBAMOS SI HAY YA UN TEMA GUARDADO EN LOCALSTORAGE, SI NO HAY, COMPROBAMOS SI EL SISTEMA OPERATIVO TIENE EL TEMA OSCURO ACTIVADO, SI NO, PONEMOS EL TEMA CLARO
+    const theme = ( () => {
+        if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')){
+            return localStorage.getItem('theme')
+        }
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            return 'dark'
+        }
+        return 'light'
+    })()
+
+//SI EL TEMA ES OSCURO, QUITAMOS LA CLASE LIGHT DEL HTML, SI NO, LA AÑADIMOS
+    if (theme === 'dark') {
+        document.documentElement.classList.remove('light')
+    }else{
+        document.documentElement.classList.add('light')
+    }
+
+</script>

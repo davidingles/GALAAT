@@ -37,10 +37,10 @@ export const books = [
 	},
 	{
 		id: 'troquel1g0011',
-		title: 'Troquel 1g0011',
+		title: 'Referencia: troquel1g0011',
 		img: '/catalogo-png/troquel1g0011.png',
-		opinion: '"Estuche practo para el transporte del usuario final',
+		opinion: 'Estuche remontable con cierre de tapa y perforado para unir a otros estuches',
 		author: 'Vicente Latorre',
-		three: 'troquel1g0011'
+		three: 'Troquel1g0011'
 	}
 ]
