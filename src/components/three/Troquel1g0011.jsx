@@ -57,7 +57,7 @@ const Troquel1g0011 = ({}) => {
 					},
 					focus: 10,
 					fov: 80,
-					zoom: 6,
+					zoom: 4,
 					position: [0, 0.5, 1.5]
 				}} >
 				<ambientLight intensity={1} />
