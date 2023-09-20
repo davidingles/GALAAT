@@ -1,62 +1,54 @@
-<button class="btn relative"> 
-<div class=" flex flex-row items-center gap-4 p-2">
+<button class="Btn relative"> 
+
     <slot />
-    <p class="font-bold text-lg">Catálogo</p>
-</div>
 
 </button>
 
 <style>
-  .btn {
-    margin-right: 1rem;
-    padding: .2rem;
- display: flex;
- height: 50%;   
- position: relative;
- display: inline-block;
- border-radius: 1rem;
- transition: all .2s;
- border: none;
- font-family: inherit;
- font-weight: 500;
- color: black;
- background-color: white;
+.Btn {
+  width: 140px;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(to right,#77530a,#ffd277,#77530a,#77530a,#ffd277,#77530a);
+  background-size: 250%;
+  background-position: left;
+  color: #ffd277;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition-duration: 1s;
+  overflow: hidden;
 }
 
-
-.btn:hover {
- transform: translateY(-3px);
- box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
- /* border-radius: 1.3rem; */
-
+.Btn::before {
+  position: absolute;
+  content: "VOLVER";
+  color: #ffd277;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 97%;
+  height: 90%;
+  border-radius: 8px;
+  transition-duration: 1s;
+  background-color: rgba(0, 0, 0, 0.842);
+  background-size: 200%;
 }
 
-.btn:active {
- transform: translateY(-1px);
- box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
- /* border-radius: 1.3rem; */
-
+.Btn:hover {
+  background-position: right;
+  transition-duration: 1s;
 }
 
-.btn::after {
- content: "";
- display: inline-block;
- height: 100%;
- width: 100%;
- border-radius: 1.3rem;
- position: absolute;
- top: 0;
- left: 0;
- z-index: -1;
- transition: all .4s;
+.Btn:hover::before {
+  background-position: right;
+  transition-duration: 1s;
 }
 
-.btn::after {
- background-color: #fff;
-}
-
-.btn:hover::after {
- transform: scaleX(1.4) scaleY(1.6);
- opacity: 0;
+.Btn:active {
+  transform: scale(0.95);
 }
 </style>
