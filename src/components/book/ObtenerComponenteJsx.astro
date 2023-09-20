@@ -6,6 +6,7 @@ import B1Cerrada from "../three/B1Cerrada";
 import BandejaAcotada from "../three/BandejaAcotada";
 import EstucheConAsas from "../three/EstucheConAsas";
 import Troquel1g0011 from "../three/Troquel1g0011";
+import Troquel1g0198 from "../three/Troquel1g0198";
 
 const { componente_jsx } = Astro.props
 
@@ -22,5 +23,8 @@ const { componente_jsx } = Astro.props
     }
     {
         componente_jsx === "Troquel1g0011" ? <Troquel1g0011 client:visible /> : null
+    }
+    {
+        componente_jsx === "Troquel1g0198" ? <Troquel1g0198 client:visible /> : null
     }
     
