@@ -1,13 +1,5 @@
 export const books = [
-	{
-		id: 'B1Cerrada',
-		title: 'Bandeja Automontable: ',
-		img: '/catalogo-png/1L0024.png',
-		opinion: 'Bandeja Automontable: Diseño standard y basico de una bandeja automontable',
-		author: 'Auxiliar Manipuladora',
-		three: 'B1Cerrada'
-		// three: 'Model client:load'
-	},
+
 	{
 		id: 'BandejaAacotada',
 		title: 'Bandeja con Cotas',
@@ -46,9 +38,25 @@ export const books = [
 	{
 		id: 'troquel1g0198',
 		title: 'Referencia: troquel1g0198',
-		img: '/catalogo-png/Troquel1g0198.png',
+		img: '/catalogo-png/troquel1g0189.png',
 		opinion: 'Estuche remontable con cierre de tapa y perforado para unir a otros estuches',
 		author: 'Vicente Latorre',
 		three: 'Troquel1g0198'
 	},
+	{
+		id: 'troquel1g0102',
+		title: 'Referencia: troquel1g0102',
+		img: '/catalogo-png/troquel1g0102.png',
+		opinion: 'Estuche remontable con cierre de tapa y perforado para unir a otros estuches',
+		author: 'Vicente Latorre',
+		three: 'Troquel1g0102'
+	},
+	{
+		id: 'troquel1L0024',
+		title: 'Referencia: troquel1L0024',
+		img: '/catalogo-png/troquel1L0024.png',
+		opinion: 'Estuche remontable con cierre de tapa y perforado para unir a otros estuches',
+		author: 'Vicente Latorre',
+		three: 'Troquel1L0024'
+	}
 ]

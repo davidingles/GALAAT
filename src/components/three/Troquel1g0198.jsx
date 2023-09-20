@@ -6,11 +6,11 @@ import { Canvas } from '@react-three/fiber'
 import { Suspense } from 'react'
 
 export function Dav(props) {
-  const { nodes, materials } = useGLTF("/Troquel1G0198.gltf");
+  const { nodes, materials } = useGLTF("/gltf/Troquel1G0198.gltf");
   return (
     <group {...props} dispose={null}>
       <group
-        position={[-0.241, 0.136, -0.059]}
+        position={[-0.241, 0.250, -0.059]}
         rotation={[Math.PI, -0.087, Math.PI]}
       >
         <mesh
@@ -73,10 +73,11 @@ const Troquel1g0011 = ({}) => {
 					},
 					focus: 10,
 					fov: 80,
-					zoom: 3,
+					zoom: 2.5
+          ,
 					position: [0, 0.5, 1.5]
 				}} >
-				<ambientLight intensity={2} />
+				<ambientLight intensity={3} />
 				{/* <pointLight position={[10, 10, 2]} /> */}
 				<Suspense fallback={null}>
 
