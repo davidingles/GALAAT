@@ -58,5 +58,13 @@ export const books = [
 		opinion: 'Estuche remontable con cierre de tapa y perforado para unir a otros estuches',
 		author: 'Vicente Latorre',
 		three: 'Troquel1L0024'
-	}
+	},
+	{
+		id: 'troquel1P0572',
+		title: 'Referencia: troquel1P0572',
+		img: '/catalogo-png/1P0572.png',
+		opinion: 'Estuche remontable con cierre de tapa y perforado para unir a otros estuches',
+		author: 'Vicente Latorre',
+		three: 'Troquel1P0572'
+	},
 ]
