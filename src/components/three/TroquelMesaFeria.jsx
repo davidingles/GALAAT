@@ -9,15 +9,15 @@ import { Suspense } from 'react'
 export function Dav(props) {
 	const { nodes, materials } = useGLTF("/gltf/TroquelMesaFeria.gltf");
 	return (
-	  <group {...props} dispose={null}>
-		<mesh
+	  <group {...props} dispose={null} scale={.5} position={[0,.1,0]}>
+		{/* <mesh
 		  castShadow
 		  receiveShadow
 		  geometry={nodes.Plane.geometry}
 		  material={nodes.Plane.material}
 		  position={[-0.011, 0.133, -0.021]}
 		  scale={[3.267, 1, 3.267]}
-		/>
+		/> */}
 		<mesh
 		  castShadow
 		  receiveShadow
