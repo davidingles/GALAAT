@@ -3,9 +3,9 @@ import { ContactShadows, OrbitControls, useGLTF } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
 
 export function Dav(props) {
-  const { nodes, materials } = useGLTF("/Troquel1P0572.gltf");
+  const { nodes, materials } = useGLTF("/gltf/Troquel1P0572.gltf");
   return (
-    <group {...props} dispose={null}>
+    <group {...props} dispose={null} scale={1.5}>
       <mesh
         castShadow
         receiveShadow

@@ -67,4 +67,20 @@ export const books = [
 		author: 'Vicente Latorre',
 		three: 'Troquel1P0572'
 	},
+	{
+		id: 'troquelComedero',
+		title: 'Referencia: troquelComedero',
+		img: '/catalogo-png/troquelComedero.png',
+		opinion: 'Estuche remontable con cierre de tapa y perforado para unir a otros estuches',
+		author: 'Vicente Latorre',
+		three: 'TroquelComedero'
+	},
+	{
+		id: 'troquelMesaFeria',
+		title: 'Referencia: troquelMesaFeria',
+		img: '/catalogo-png/troquelMesaFeria.png',
+		opinion: 'Estuche remontable con cierre de tapa y perforado para unir a otros estuches',
+		author: 'Vicente Latorre',
+		three: 'TroquelMesaFeria'
+	},
 ]
