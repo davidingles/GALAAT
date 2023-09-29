@@ -12,6 +12,7 @@ import Troquel1L0024 from "../three/Troquel1L0024";
 import Troquel1P0572 from "../three/Troquel1P0572";
 import TroquelComedero from "../three/TroquelComedero";
 import TroquelMesaFeria from "../three/TroquelMesaFeria";
+import TroquelMuebleMadera from "../three/TroquelMuebleMadera";
 
 const { componente_jsx } = Astro.props
 
@@ -46,5 +47,8 @@ const { componente_jsx } = Astro.props
     }
     {
         componente_jsx === "TroquelMesaFeria" ? <TroquelMesaFeria client:visible /> : null
+    }
+    {
+        componente_jsx === "TroquelMuebleMadera" ? <TroquelMuebleMadera client:visible /> : null
     }
 
