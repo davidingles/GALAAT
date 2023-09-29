@@ -91,4 +91,20 @@ export const books = [
 		author: 'Vicente Latorre',
 		three: 'TroquelMuebleMadera'
 	},
+	{
+		id: 'troquelMando',
+		title: 'Referencia: troquelMando',
+		img: '/catalogo-png/troquelMando.png',
+		opinion: 'Estuche remontable con cierre de tapa y perforado para unir a otros estuches',
+		author: 'Vicente Latorre',
+		three: 'TroquelMando'
+	},
+	{
+		id: 'troquelMaleta',
+		title: 'Referencia: troquelMaleta',
+		img: '/catalogo-png/troquelMaleta.png',
+		opinion: 'Estuche remontable con cierre de tapa y perforado para unir a otros estuches',
+		author: 'Vicente Latorre',
+		three: 'TroquelMaleta'
+	},
 ]
