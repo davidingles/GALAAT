@@ -115,4 +115,12 @@ export const books = [
 		author: 'Vicente Latorre',
 		three: 'TroquelCajaB1'
 	},
+	{
+		id: 'troquelCaballete',
+		title: 'Referencia: troquelCaballete',
+		img: '/catalogo-png/troquelCaballete.png',
+		opinion: 'Estuche remontable con cierre de tapa y perforado para unir a otros estuches',
+		author: 'Vicente Latorre',
+		three: 'TroquelCaballete'
+	},
 ]
