@@ -1,112 +1,149 @@
-<div id="" class="flex flex-col max-h-full">
-	<div class="carrousel">
-    <div class="relative border-e-8">
-      <div id="david" class="grande">
-        <img id="aaa" src="/img/nav.jpg" alt="Imagen 1" class="img">
-        <img id="bbb" src="/img/nave.jpg" alt="Imagen 2" class="img">
-        <img id="ccc" src="/img/cielo.jpg" alt="Imagen 2" class="img">
-      </div>
-      <div 
-        id="ventana" 
-        class="opacity-0 absolute z-40 bottom-1/2 h-[200px] xl:left-[444px] lg:left-[222px] md:left-[222px] sm:left-[111px] -translate-x-1/2 w-1/3 bg-opacity-70 backdrop-blur-sm bg-white p-8 rounded-lg shadow-2xl flex flex-col justify-center items-center"
-      >
-        <p class="martes text-black tipografia">
-          Auxiliar Manipuladora del Cartón, S.L. fue fundada en 1995 como una empresa familiar, avalada con la experiencia de más de una década de trabajo en el sector de sus fundadores. 
-        </p>
-      </div>
-      <div 
-        id="puerta" 
-        class="opacity-0 absolute z-40 bottom-12 h-[200px] right-20 w-1/3 bg-opacity-70 backdrop-blur-sm bg-white p-8 rounded-lg shadow-2xl flex flex-col justify-center items-center"
-      >
-        <p class="martes text-black tipografia">
-          Debido a su seriedad y honestidad Auxiliar Manipuladora del Cartón SL, esta creciendo con paso firme al igual que la confianza y respeto de sus clientes y proveedores. 
-        </p>
-      </div>
-      <div 
-        id="escala" 
-        class="opacity-0 absolute z-40 bottom-12 h-[200px] left-12 w-1/3 bg-opacity-70 backdrop-blur-sm bg-white p-8 rounded-lg shadow-2xl flex flex-col justify-center items-center"
-      >
-        <p class="martes text-black tipografia">
-          El espíritu de superación, conocimiento y capacidad de todas las personas que trabajan directa o indirectamente en la empresa, hace que ésta acepte los retos y se adapte aun mercado más competitivo y exigente.
-        </p>
-      </div>
-      
-    </div>
-	
-		<ul class="puntos">
-			<li class="punto activo cursor-pointer"></li>
-			<li class="punto cursor-pointer"></li>
-			<li class="punto cursor-pointer"></li>
+<div
+	id=''
+	class='flex flex-col max-h-full'
+>
+	<div class='carrousel w-screen sm:w-full border-8'>
+		<!-- // IMAGENES DEL CARRUSEL -->
+		<div class='relative border-e-8'>
+			<!-- // FOTOS DEL CARRUSEL -->
+			<div
+				id='david'
+				class='grande'
+			>
+				<img
+					id='aaa'
+					src='/img/nav.jpg'
+					alt='Imagen 1'
+					class='img'
+				/>
+				<img
+					id='bbb'
+					src='/img/nave.jpg'
+					alt='Imagen 2'
+					class='img'
+				/>
+				<img
+					id='ccc'
+					src='/img/cielo.jpg'
+					alt='Imagen 2'
+					class='img'
+				/>
+			</div>
+
+			<!-- // PRIMER TEXTO ================================================================================================= -->
+			<div
+				id='ventana'
+				class='opacity-0 absolute z-40 bottom-1/2 h-[200px] xl:left-[444px] lg:left-[222px] md:left-[222px] sm:left-[111px] -translate-x-1/2 w-1/3 bg-opacity-70 backdrop-blur-sm bg-white p-8 rounded-lg shadow-2xl flex flex-col justify-center items-center'
+			>
+				<p class='text-black tipografia'>
+					Auxiliar Manipuladora del Cartón, S.L. fue fundada en 1995 como una
+					empresa familiar, avalada con la experiencia de más de una década de
+					trabajo en el sector de sus fundadores.
+				</p>
+			</div>
+
+			<!-- // SEGUNDO TEXTO ================================================================================================= -->
+			<div
+				id='puerta'
+				class='opacity-0 absolute z-40 bottom-12 h-[200px] right-20 w-1/3 bg-opacity-70 backdrop-blur-sm bg-white p-8 rounded-lg shadow-2xl flex flex-col justify-center items-center'
+			>
+				<p class='text-black tipografia'>
+					Debido a su seriedad y honestidad Auxiliar Manipuladora del Cartón SL,
+					esta creciendo con paso firme al igual que la confianza y respeto de
+					sus clientes y proveedores.
+				</p>
+			</div>
+
+			<!-- // TERCER TEXTO ================================================================================================= -->
+			<div
+				id='escala'
+				class='opacity-0 absolute z-40 bottom-12 h-[200px] left-12 w-1/3 bg-opacity-70 backdrop-blur-sm bg-white p-8 rounded-lg shadow-2xl flex flex-col justify-center items-center'
+			>
+				<p class='text-black tipografia'>
+					El espíritu de superación, conocimiento y capacidad de todas las
+					personas que trabajan directa o indirectamente en la empresa, hace que
+					ésta acepte los retos y se adapte aun mercado más competitivo y
+					exigente.
+				</p>
+			</div>
+		</div>
+
+		<!-- // PUNTOS DEL CARRUSEL -->
+		<ul class='puntos'>
+			<li class='punto activo cursor-pointer'></li>
+			<li class='punto cursor-pointer'></li>
+			<li class='punto cursor-pointer'></li>
 		</ul>
 	</div>
 </div>
 
 <style>
-	.tipografia{
-	font-family: var(--tipo-erasdemi);
+	.tipografia {
+		font-family: var(--tipo-erasdemi);
 	}
 </style>
 
 <style>
-
-
-
 	.carrousel {
-  color: var(--negro);
-  transition: all 0.4s ease;
-  overflow: hidden;
-}
+		color: var(--negro);
+		transition: all 0.4s ease;
+		overflow: hidden;
+	}
 
-.carrousel .grande {
-  width: 300%;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
-  transition: all 0.4s ease;
-  transition: all 0.5s ease;
-  transform: translateX(0%);
-  border-radius: 1rem;
-}
+	.carrousel .grande {
+		width: 300%;
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: space-between;
+		transition: all 0.4s ease;
+		transition: all 0.5s ease;
+		transform: translateX(0%);
+		border-radius: 1rem;
+	}
 
-.carrousel .img {
-  width: calc( 100% / 3 - 2rem);
-  min-height: 10vh;
-  height: 55vh;
-  transition: all 0.4s ease;
-  border-radius: 1rem;
-  border-color: white solid 3px;
-  box-shadow: 2px 2px 2px 0px rgba(0,0,0,.8) ;
-}
+	.carrousel .img {
+		width: calc(100% / 3 - 2rem);
+		min-height: 10vh;
+		height: 55vh;
+		transition: all 0.4s ease;
+		border-radius: 1rem;
+		border-color: white solid 3px;
+		box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.8);
+	}
 
-.carrousel .puntos {
-  width: 100%;
-  margin: 1em 0 0;
-  padding: 0.4em;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  align-items: center;
-}
+	.carrousel .puntos {
+		width: 100%;
+		margin: 1em 0 0;
+		padding: 0.4em;
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: center;
+		align-items: center;
+	}
 
-.carrousel .punto {
-  width: 1rem;
-  height: 1rem;
-  margin: 1em 1em 0;
-  color: var(--negro);
-  transition: all 0.4s ease;
-  border-radius: 1em;
-  background-color: gray;
-  box-shadow: 0.6em 0.6em 1.2em var(--sombra-ppal), -0.6em -0.6em 1.2em var(--sombra-sec), inset 0 0 0 transparent, inset 0 0 0 transparent;
-}
+	.carrousel .punto {
+		width: 1rem;
+		height: 1rem;
+		margin: 1em 1em 0;
+		color: var(--negro);
+		transition: all 0.4s ease;
+		border-radius: 1em;
+		background-color: gray;
+		box-shadow:
+			0.6em 0.6em 1.2em var(--sombra-ppal),
+			-0.6em -0.6em 1.2em var(--sombra-sec),
+			inset 0 0 0 transparent,
+			inset 0 0 0 transparent;
+	}
 
-.carrousel .punto.activo {
-  background-color: var(--auxiliar1);
-}
+	.carrousel .punto.activo {
+		background-color: var(--auxiliar1);
+	}
 </style>
 
 <!-- // ANIMACION PARA LA VENTANA DE LA NAVE ================================================================================================= -->
 <style>
-	.ventana-texto{
+	.ventana-texto {
 		transition: all 1s ease-in-out;
 		animation-name: aparecer;
 		animation-delay: 2s;
@@ -122,7 +159,7 @@
 		}
 	}
 
-	.img-nave{
+	.img-nave {
 		transition: all 1s ease-in-out;
 		animation-name: brightness;
 		animation-delay: 1s;
@@ -134,12 +171,11 @@
 			filter: brightness(1);
 		}
 		to {
-			filter: brightness(.5);
+			filter: brightness(0.5);
 		}
-		
 	}
 
-  .ventana{
+	.ventana {
 		transition: all 1s ease-in-out;
 		animation-name: aparecer;
 		animation-delay: 2s;
@@ -154,117 +190,104 @@
 			opacity: 1;
 		}
 	}
-	
-		
-	
 </style>
 
 <script>
-	const grande    = document.querySelector('.grande') as HTMLElement
-	const punto     = document.querySelectorAll('.punto') 
-  const imagen    = document.querySelectorAll('.img')
+	const grande = document.querySelector('.grande') as HTMLElement
+	const punto = document.querySelectorAll('.punto')
+	const imagen = document.querySelectorAll('.img')
 
-// Cuando CLICK en punto
-    // Saber la posición de ese punto
-    // Aplicar un transform translateX al grande
-    // QUITAR la clase activo de TODOS puntos
-    // AÑADIR la clase activo al punto que hemos hecho CLICK
+	// Cuando CLICK en punto
+	// Saber la posición de ese punto
+	// Aplicar un transform translateX al grande
+	// QUITAR la clase activo de TODOS puntos
+	// AÑADIR la clase activo al punto que hemos hecho CLICK
 
-// Recorrer TODOS los punto
-	punto.forEach( ( cadaPunto , i )=> {
-    // Asignamos un CLICK a cadaPunto
-    	punto[i].addEventListener('click',()=>{
+	// Recorrer TODOS los punto
+	punto.forEach((cadaPunto, i) => {
+		// Asignamos un CLICK a cadaPunto
+		punto[i].addEventListener('click', () => {
+			// Guardar la posición de ese PUNTO
+			let posicion = i
+			// Calculando el espacio que debe DESPLAZARSE el GRANDE
+			let operacion = posicion * -33.333
 
-        // Guardar la posición de ese PUNTO
-        let posicion  = i
-        // Calculando el espacio que debe DESPLAZARSE el GRANDE
-        let operacion = posicion * -33.333
+			// MOVEMOS el grand
+			grande.style.transform = `translateX(${operacion}%)`
 
-        // MOVEMOS el grand
-        grande.style.transform = `translateX(${ operacion }%)`
+			// Recorremos TODOS los punto
+			punto.forEach((cadaPunto, i) => {
+				// Quitamos la clase ACTIVO a TODOS los punto
+				punto[i].classList.remove('activo')
+				imagen[i].classList.remove('activo')
+			})
+			// Añadir la clase activo en el punto que hemos hecho CLICK
+			punto[i].classList.add('activo')
 
-        // Recorremos TODOS los punto
-        punto.forEach( ( cadaPunto , i )=>{
-            // Quitamos la clase ACTIVO a TODOS los punto
-            punto[i].classList.remove('activo')
-            imagen[i].classList.remove('activo')
-        })
-        // Añadir la clase activo en el punto que hemos hecho CLICK
-        punto[i].classList.add('activo')
+			// imagen.forEach( ( cadaImagen , i )=>{
 
-        // imagen.forEach( ( cadaImagen , i )=>{
-
-        //     imagen[i].classList.remove('activo')
-        //     imagen[posicion].classList.add('activo')
-        })
-
-
-    })
-
-
+			//     imagen[i].classList.remove('activo')
+			//     imagen[posicion].classList.add('activo')
+		})
+	})
 </script>
 
 <!-- //OBSERVER PARA OSCURECER LA IMAGEN DE LA NAVE Y APARECER LA VENTANA ================================================================================================= -->
 <script>
-  const ventana = document.querySelector('#ventana') as HTMLElement
-  const puerta = document.querySelector('#puerta') as HTMLElement
-  const escala = document.querySelector('#escala') as HTMLElement
-  const nave1 = document.querySelector('#aaa') as HTMLElement
-  const nave2 = document.querySelector('#bbb') as HTMLElement
-  const nave3 = document.querySelector('#ccc') as HTMLElement
+	const ventana = document.querySelector('#ventana') as HTMLElement
+	const puerta = document.querySelector('#puerta') as HTMLElement
+	const escala = document.querySelector('#escala') as HTMLElement
+	const nave1 = document.querySelector('#aaa') as HTMLElement
+	const nave2 = document.querySelector('#bbb') as HTMLElement
+	const nave3 = document.querySelector('#ccc') as HTMLElement
 
-
-  const observerOptions = {
-	  root: null,
-	  rootMargin: "100px", // en cuanto se vea el elemento
-	  threshold: 0.5, // porcentaje de visibilidad
+	const observerOptions = {
+		root: null,
+		rootMargin: '100px', // en cuanto se vea el elemento
+		threshold: 0.5, // porcentaje de visibilidad
 	}
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      const { isIntersecting } = entry
-      if (isIntersecting) {
-        nave1.classList.add('img-nave')
-        ventana.classList.add('ventana')
-      } else {
-        nave1.classList.remove('img-nave')
-        ventana.classList.remove('ventana')
-      }
-    })
-  }, observerOptions)
+	const observer = new IntersectionObserver((entries) => {
+		entries.forEach((entry) => {
+			const { isIntersecting } = entry
+			if (isIntersecting) {
+				nave1.classList.add('img-nave')
+				ventana.classList.add('ventana')
+			} else {
+				nave1.classList.remove('img-nave')
+				ventana.classList.remove('ventana')
+			}
+		})
+	}, observerOptions)
 
-  const observer2 = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      const { isIntersecting } = entry
-      if (isIntersecting) {
-        nave2.classList.add('img-nave')
-        puerta.classList.add('ventana')
-      } else {
-        nave2.classList.remove('img-nave')
-        puerta.classList.remove('ventana')
-      }
-    })
-  }, observerOptions)
+	const observer2 = new IntersectionObserver((entries) => {
+		entries.forEach((entry) => {
+			const { isIntersecting } = entry
+			if (isIntersecting) {
+				nave2.classList.add('img-nave')
+				puerta.classList.add('ventana')
+			} else {
+				nave2.classList.remove('img-nave')
+				puerta.classList.remove('ventana')
+			}
+		})
+	}, observerOptions)
 
-  const observer3 = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      const { isIntersecting } = entry
-      if (isIntersecting) {
-        nave3.classList.add('img-nave')
-        escala.classList.add('ventana')
-      } else {
-        nave3.classList.remove('img-nave')
-        escala.classList.remove('ventana')
-      }
-    })
-  }, observerOptions)
+	const observer3 = new IntersectionObserver((entries) => {
+		entries.forEach((entry) => {
+			const { isIntersecting } = entry
+			if (isIntersecting) {
+				nave3.classList.add('img-nave')
+				escala.classList.add('ventana')
+			} else {
+				nave3.classList.remove('img-nave')
+				escala.classList.remove('ventana')
+			}
+		})
+	}, observerOptions)
 
-  observer.observe(nave1)
-  observer2.observe(nave2)
-  observer3.observe(nave3)
+	observer.observe(nave1)
+	observer2.observe(nave2)
+	observer3.observe(nave3)
 </script>
 <!-- //OBSERVER PARA OSCURECER LA IMAGEN DE LA NAVE Y APARECER LA VENTANA ================================================================================================= -->
-
-
-
-

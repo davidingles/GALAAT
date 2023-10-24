@@ -1,26 +1,41 @@
---- 
-import '../global.css';
+---
+import '../global.css'
 interface Props {
-	title?: string;
+	title?: string
 }
 
 // import { ViewTransitions } from 'astro:transitions';
 
-const { title } = Astro.props;
+const { title } = Astro.props
 ---
 
-<!DOCTYPE html>
-<html lang="es">
+<!doctype html>
+<html lang='es'>
 	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description">
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/svg/favicon2-01.svg" />
-		<meta name="generator" content={Astro.generator} />
+		<meta charset='UTF-8' />
+		<meta
+			name='description'
+			content='Astro description'
+		/>
+		<meta
+			name='viewport'
+			content='width=device-width'
+		/>
+		<link
+			rel='icon'
+			type='image/svg+xml'
+			href='/svg/favicon2-01.svg'
+		/>
+		<meta
+			name='generator'
+			content={Astro.generator}
+		/>
 		<title>{title}</title>
 		<!-- <ViewTransitions /> -->
 	</head>
-	<body class="dil-barra-desplazamiento max-w-screen m-auto flex flex-col justify-center">
+	<body
+		class='dil-barra-desplazamiento w-screen min-h-screen flex flex-col border-8 border-yellow-500'
+	>
 		<slot />
 	</body>
 </html>

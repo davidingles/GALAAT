@@ -1,31 +1,35 @@
 ---
-import TextoAnimadoTelefono from '../botones-sliders/TextoAnimadoTelefono.astro';
-import BtnAdelante from '../botones-sliders/BtnAdelante.astro';
+import TextoAnimadoTelefono from '../botones-sliders/TextoAnimadoTelefono.astro'
+import BtnAdelante from '../botones-sliders/BtnAdelante.astro'
+import { Image } from 'astro:assets'
+import logito from '/svg/log.svg'
 ---
 
+<div class='w-2/3 h-2/3 flex flex-col items-center'>
+	<div
+		class='mb-10 lg:w-[633px] lg:h-[633px] md:w-[333px] md:h-[333px] w-[222px] h-[222px] flex items-center'
+	>
+		<Image
+			src='/svg/log.svg'
+			width={88}
+			height={88}
+			alt=''
+		/>
+	</div>
 
-// BEGIN: svg-import
-const miSvg = import('/path/to/my/svg/file.svg');
-// END: svg-import
-<div  class="w-2/3 h-2/3 flex flex-col items-center">
-		
-    <div class="mb-[4rem] border-8 border-red-400 w-[8rem]  " >
-        <img class="border-2 max-w-[100%] max-h-[100%] object-cover" src="/svg/logo-aux.svg" alt="logo de la Auxiliar Manipuladora del Cartón">
-    </div>
-    
-    <div class="logo">
-        <div class="flex justify-center mb-4">
-            <TextoAnimadoTelefono />
-        </div>
-        <p class="tipografia md:max-w-3xl indent-10 text-xl font-light text-left">
-            Empresa dedicada a la fabricación de envases y embalajes de cartón ondulado y otros productos relacionados con el embalaje.
-            Cajas, bandejas, estuches, expositores, separadores, plancha paletizaje, etc.
-        </p>
-        <div class="mt-4 mb-60">
-            <a href="/catalogo">
-                <BtnAdelante />
-            </a>
-        </div>
-    </div>
-
+	<div class='logo'>
+		<div class='flex justify-center mb-4'>
+			<TextoAnimadoTelefono />
+		</div>
+		<p class='tipografia md:max-w-3xl indent-10 text-xl font-light text-left'>
+			Empresa dedicada a la fabricación de envases y embalajes de cartón
+			ondulado y otros productos relacionados con el embalaje. Cajas, bandejas,
+			estuches, expositores, separadores, plancha paletizaje, etc.
+		</p>
+		<div class='mt-4 mb-60'>
+			<a href='/catalogo'>
+				<BtnAdelante />
+			</a>
+		</div>
+	</div>
 </div>

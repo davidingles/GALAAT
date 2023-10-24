@@ -3,87 +3,91 @@ import Header from '../components/header/Header.astro'
 import Layout from '../layouts/Layout.astro'
 import Footer from '../components/footer/Footer.astro'
 import Carrusel from '../components/carrusel/Carrusel.astro'
-import Modal from '../components/footer/Modal.astro';
-import SeccionContactos from '../components/secciones/SeccionContactos.astro';
-import SeccionVideos from '../components/secciones/SeccionVideos.astro';
-import SeccionLogo from '../components/secciones/SeccionLogo.astro';
+import Modal from '../components/footer/Modal.astro'
+import SeccionContactos from '../components/secciones/SeccionContactos.astro'
+import SeccionVideos from '../components/secciones/SeccionVideos.astro'
+import SeccionLogo from '../components/secciones/SeccionLogo.astro'
 
 const title = 'Auxiliar Manipuladora del Cartón'
 ---
 
 <Layout title={title}>
-
-	<div class="relative flex flex-col h-max-screen w-max-screen items-end border-8">
-		<div class="fixed w-full z-20 top-0">
+	<div
+		class='relative flex flex-col min-h-screen w-full m-auto items-end border-8 border-red-400'
+	>
+		<div class='fixed w-full z-20 top-0'>
 			<Header />
 		</div>
-<!-- //BODY =================================================================================================		 -->
-		<main class="flex flex-col max-w-[80%] m-auto">
+		<!-- //BODY =================================================================================================		 -->
+		<main class='flex flex-col max-w-[80%] m-auto'>
+			<!-- // SECCION 1 LOGO Y TEXTO ==================================================== -->
+			<div class='logo flex justify-center items-center py-8 h-screen border-8'>
+				<SeccionLogo />
+			</div>
 
-<!-- // SECCION 1 LOGO Y TEXTO ==================================================== -->
-				<div class="logo flex justify-center items-center py-8 h-screen border-8">
-					<SeccionLogo />
-				</div>
+			<!-- //ANIMACION PARA EL LOGO PRINCIPAL ============================================================= -->
+			<style>
+				.logo {
+					animation-name: fadeDown;
+					animation-duration: 1s;
+					animation-fill-mode: both;
+					animation-delay: 0.3s;
+				}
 
-				<!-- //ANIMACION PARA EL LOGO PRINCIPAL ============================================================= -->
-				<style>
-
-
-					.logo {
-						animation-name: fadeDown;
-						animation-duration: 1s;
-						animation-fill-mode: both;
-						animation-delay: .3s;
+				@keyframes fadeDown {
+					from {
+						opacity: 0;
+						transform: translate3d(0, -100%, 0);
 					}
-
-					@keyframes fadeDown {
-						from {
-							opacity: 0;
-							transform: translate3d(0, -100%, 0);
-						}
-						to{
-							opacity: 1;
-							transform: translate3d(0, 0, 0);
-						}
-
+					to {
+						opacity: 1;
+						transform: translate3d(0, 0, 0);
 					}
-					
-					.fadeDown {
-						animation-name: fadeDown;
-					}
+				}
 
+				.fadeDown {
+					animation-name: fadeDown;
+				}
+			</style>
 
-				</style>
-		
-<!-- // SECCIOn2 CARRUSELL ==================================================== -->
-			<div id="nave" class="min-h-screen flex justify-center items-center">
-				<div class="h-[44%] flex flex-row justify-center items-center">
+			<!-- // SECCIOn2 CARRUSELL ==================================================== -->
+			<div
+				id='nave'
+				class='min-h-screen flex justify-center items-center'
+			>
+				<div class='h-[44%] flex flex-row justify-center items-center'>
 					<Carrusel />
 				</div>
 			</div>
 
-<!-- // SECCION CONTACTOS ====================================================  -->
-				<div id="contacto" class= "relative ">
-					<SeccionContactos />
-				</div>
+			<!-- // SECCION CONTACTOS ====================================================  -->
+			<div
+				id='contacto'
+				class='relative'
+			>
+				<SeccionContactos />
+			</div>
 
-<!-- // SECCION CAMION ==================================================== -->
-				<div id="camion" class=" relative flex flex-col justify-center">
-					<SeccionVideos />
-				</div>
-
+			<!-- // SECCION CAMION ==================================================== -->
+			<div
+				id='camion'
+				class='relative flex flex-col justify-center'
+			>
+				<SeccionVideos />
+			</div>
 		</main>
-<!-- //FOOTER =====================================================		 -->
-		<div class="relative flex justify-center items-center h-[22rem] bg-[#303030] text-[#808080]">
+		<!-- //FOOTER =====================================================		 -->
+		<div
+			class='relative flex justify-center items-center h-[22rem] bg-[#303030] text-[#808080]'
+		>
 			<Footer />
 		</div>
-			<Modal />
-		</div>
-
+		<Modal />
+	</div>
 </Layout>
 
 <style>
-	:global(.light) .camion{
+	:global(.light) .camion {
 		color: #202020;
 	}
 	.tipo {
@@ -94,19 +98,16 @@ const title = 'Auxiliar Manipuladora del Cartón'
 	}
 </style>
 
-
-
 <!-- // TEMA OSCURO ==================================================================================================  -->
 <style>
-	:global(.light) .david{
+	:global(.light) .david {
 		color: black;
 	}
 </style>
 
 <!-- //TIPOGRAFIA ================================================================================================== -->
 <style>
-	.tipografia{
-	font-family: Helvetica, Arial, sans-serif;
+	.tipografia {
+		font-family: Helvetica, Arial, sans-serif;
 	}
-
 </style>
