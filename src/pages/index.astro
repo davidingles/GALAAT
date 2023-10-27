@@ -13,18 +13,20 @@ const title = 'Auxiliar Manipuladora del Cartón'
 
 <Layout title={title}>
 	<!-- // MAIN ============================================================================================================= -->
-	<div class='relative flex flex-col m-auto h-full border-8 border-red-400'>
+	<div
+		class='relative flex flex-col m-auto min-h-screen border-8 border-red-400'
+	>
 		<!-- // HEADER ======================================================================================================== -->
 		<div class='fixed w-full z-20 top-0'>
 			<Header />
 		</div>
 		<!-- //BODY =================================================================================================		 -->
 		<main
-			class='flex flex-col max-w-[80%] h-full m-auto border-2 border-green-700'
+			class='flex flex-col max-w-[80%] min-h-screen m-auto border-8 border-green-700'
 		>
 			<!-- // SECCION 1 LOGO Y TEXTO ==================================================== -->
 			<div
-				class='logo flex justify-center items-center py-8 h-full border-8 border-pink-500'
+				class='logo flex justify-center items-center py-8 min-h-[1200px] sm:min-h-screen border-8 border-pink-500 mt-14'
 			>
 				<SeccionLogo />
 			</div>
@@ -57,19 +59,15 @@ const title = 'Auxiliar Manipuladora del Cartón'
 			<!-- // SECCIOn2 CARRUSELL ==================================================== -->
 			<div
 				id='nave'
-				class='h-full flex justify-center items-center border-2 border-slate-900 m-2'
+				class='flex justify-center items-center border-8 border-slate-900 m-2 mt-32 h-[1200px] sm:h-[900px] md:min-h-screen flex-row'
 			>
-				<div
-					class='h-[44%] flex flex-row justify-center items-center border-4 border-violet-300'
-				>
-					<Carrusel />
-				</div>
+				<Carrusel />
 			</div>
 
 			<!-- // SECCION CONTACTOS ====================================================  -->
 			<div
 				id='contacto'
-				class='relative h-full border-2 border-red-600 m-2'
+				class='relative min-h-screen border-2 border-red-600 m-2'
 			>
 				<SeccionContactos />
 			</div>
@@ -77,7 +75,7 @@ const title = 'Auxiliar Manipuladora del Cartón'
 			<!-- // SECCION CAMION ==================================================== -->
 			<div
 				id='camion'
-				class='relative flex flex-col justify-center border-2 border-cyan-400 m-2'
+				class='relative flex flex-col justify-center border-2 border-cyan-400 m-2 min-h-screen'
 			>
 				<SeccionVideos />
 			</div>
