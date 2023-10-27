@@ -12,16 +12,20 @@ const title = 'Auxiliar Manipuladora del Cartón'
 ---
 
 <Layout title={title}>
-	<div
-		class='relative flex flex-col min-h-screen w-full m-auto items-end border-8 border-red-400'
-	>
+	<!-- // MAIN ============================================================================================================= -->
+	<div class='relative flex flex-col m-auto h-full border-8 border-red-400'>
+		<!-- // HEADER ======================================================================================================== -->
 		<div class='fixed w-full z-20 top-0'>
 			<Header />
 		</div>
 		<!-- //BODY =================================================================================================		 -->
-		<main class='flex flex-col max-w-[80%] m-auto'>
+		<main
+			class='flex flex-col max-w-[80%] h-full m-auto border-2 border-green-700'
+		>
 			<!-- // SECCION 1 LOGO Y TEXTO ==================================================== -->
-			<div class='logo flex justify-center items-center py-8 h-screen border-8'>
+			<div
+				class='logo flex justify-center items-center py-8 h-full border-8 border-pink-500'
+			>
 				<SeccionLogo />
 			</div>
 
@@ -32,6 +36,7 @@ const title = 'Auxiliar Manipuladora del Cartón'
 					animation-duration: 1s;
 					animation-fill-mode: both;
 					animation-delay: 0.3s;
+					/* animation-timing-function: ease-in-out; */
 				}
 
 				@keyframes fadeDown {
@@ -44,18 +49,19 @@ const title = 'Auxiliar Manipuladora del Cartón'
 						transform: translate3d(0, 0, 0);
 					}
 				}
-
-				.fadeDown {
-					animation-name: fadeDown;
+				.logo {
+					animation-timing-function: ease-in-out;
 				}
 			</style>
 
 			<!-- // SECCIOn2 CARRUSELL ==================================================== -->
 			<div
 				id='nave'
-				class='min-h-screen flex justify-center items-center'
+				class='h-full flex justify-center items-center border-2 border-slate-900 m-2'
 			>
-				<div class='h-[44%] flex flex-row justify-center items-center'>
+				<div
+					class='h-[44%] flex flex-row justify-center items-center border-4 border-violet-300'
+				>
 					<Carrusel />
 				</div>
 			</div>
@@ -63,7 +69,7 @@ const title = 'Auxiliar Manipuladora del Cartón'
 			<!-- // SECCION CONTACTOS ====================================================  -->
 			<div
 				id='contacto'
-				class='relative'
+				class='relative h-full border-2 border-red-600 m-2'
 			>
 				<SeccionContactos />
 			</div>
@@ -71,7 +77,7 @@ const title = 'Auxiliar Manipuladora del Cartón'
 			<!-- // SECCION CAMION ==================================================== -->
 			<div
 				id='camion'
-				class='relative flex flex-col justify-center'
+				class='relative flex flex-col justify-center border-2 border-cyan-400 m-2'
 			>
 				<SeccionVideos />
 			</div>
